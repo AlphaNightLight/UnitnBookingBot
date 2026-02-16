@@ -1,0 +1,22 @@
+\hypertarget{create__db_8py}{}\doxysection{create\+\_\+db.\+py File Reference}
+\label{create__db_8py}\index{create\_db.py@{create\_db.py}}
+
+
+Functions to print the values from the database.  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{create__db_8py_a859791d57bc43318b8dac36a30b8c5ab}\label{create__db_8py_a859791d57bc43318b8dac36a30b8c5ab}} 
+{\bfseries create\+\_\+db.\+db} = os.\+getenv(\char`\"{}D\+B\+\_\+\+P\+A\+TH\char`\"{})
+\item 
+\mbox{\Hypertarget{create__db_8py_ae4c7458725375094b0ac2b08838372bd}\label{create__db_8py_ae4c7458725375094b0ac2b08838372bd}} 
+{\bfseries create\+\_\+db.\+con} = sqlite3.\+connect(db)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions to print the values from the database. 
+
+This file contains the implementation of the functions with reading access to the database that prints the records on the standard output instead of returning them to the user. They are useful when the database is being inspected directly from the code instead of using the Telegram A\+PI. 

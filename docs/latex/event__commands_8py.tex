@@ -1,0 +1,403 @@
+\hypertarget{event__commands_8py}{}\doxysection{handlers/event\+\_\+commands.py File Reference}
+\label{event__commands_8py}\index{handlers/event\_commands.py@{handlers/event\_commands.py}}
+
+
+Handlers that manipulate the events and associated slots.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{event__commands_8py_a84641401830bdfb608991a7f1e0079f2}{event\+\_\+commands.\+ask\+\_\+event\+\_\+name}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em I\+N\+IT state for /publish. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a23809947a4e0510e20b1a2e04f3da7c7}{event\+\_\+commands.\+ask\+\_\+event\+\_\+fair}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 0 for /publish. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a72f82a9863e3e7edeaee896fc306f414}{event\+\_\+commands.\+log\+\_\+event\+\_\+creation}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 1 for /publish. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a46fad240192f40a282d4dd8ba241975f}{event\+\_\+commands.\+ask\+\_\+event\+\_\+description}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em I\+N\+IT state for /changedes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a1a688285d3fd532e910d6d651bf3056d}{event\+\_\+commands.\+select\+\_\+user\+\_\+event\+\_\+after\+\_\+text}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 0 for /changedes and /newslot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a14b92edcf9c1f3fa12bf50677e7b5be0}{event\+\_\+commands.\+log\+\_\+description\+\_\+update}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 1 for /changedes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a675ed2c74d9cf25a022f9058de4be4c3}{event\+\_\+commands.\+ask\+\_\+event\+\_\+date}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em I\+N\+IT state for /newslot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a6f1755e013f0cf6ab4c8fafe26d4a53e}{event\+\_\+commands.\+log\+\_\+slot\+\_\+creation}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 1 for /newslot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a52cca1b82927f8bd3fbcd6b4059efd2a}{event\+\_\+commands.\+select\+\_\+user\+\_\+event}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em I\+N\+IT state for /deleteslot, /deleteevent and /myevents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_aed849e8d02940a29273c9ba46f33c00e}{event\+\_\+commands.\+select\+\_\+slot\+\_\+for\+\_\+event}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 0 for /deleteslot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a87d0a81c925b1cdad5e341473629a0f0}{event\+\_\+commands.\+confirm\+\_\+slot\+\_\+deleting}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 1 for /deleteslot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a730764fc535507d666b4e1fc8b27a1e3}{event\+\_\+commands.\+log\+\_\+slot\+\_\+deleting}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 2 for /deleteslot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a49b283594dd7b2e8014320b06f2ff7e6}{event\+\_\+commands.\+confirm\+\_\+event\+\_\+deleting}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 0 for /deleteevent. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a13d2cbfd3eb89c5788aca968c68eff33}{event\+\_\+commands.\+log\+\_\+event\+\_\+deleting}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 1 for /deleteevent. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{event__commands_8py_a35f5afc769dfe5fd9f2ebd815326c2f4}{event\+\_\+commands.\+show\+\_\+event\+\_\+details}} (Update update, Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE context)
+\begin{DoxyCompactList}\small\item\em S\+T\+A\+TE 0 for /myevents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{event__commands_8py_aba9c701539ca44ea6373a2f34538076d}\label{event__commands_8py_aba9c701539ca44ea6373a2f34538076d}} 
+{\bfseries event\+\_\+commands.\+db} = os.\+getenv(\char`\"{}D\+B\+\_\+\+P\+A\+TH\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handlers that manipulate the events and associated slots. 
+
+This file contains the implementation of the Telegram Bot Handlers that manage the lifecycle of events and slots associated to them. They are triggered by the following commands\+: {\ttfamily /publish}, {\ttfamily /changedes}, {\ttfamily /newslot} {\ttfamily /deleteslot}, {\ttfamily /deleteevent}, {\ttfamily /myevents}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{event__commands_8py_a675ed2c74d9cf25a022f9058de4be4c3}\label{event__commands_8py_a675ed2c74d9cf25a022f9058de4be4c3}} 
+\index{event\_commands.py@{event\_commands.py}!ask\_event\_date@{ask\_event\_date}}
+\index{ask\_event\_date@{ask\_event\_date}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{ask\_event\_date()}{ask\_event\_date()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+ask\+\_\+event\+\_\+date (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+I\+N\+IT state for /newslot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+Conversation initializer for the {\ttfamily /newslot} command.
+
+This function asks the user an event time for the slot, then goes to S\+T\+A\+TE 0 \mbox{\Hypertarget{event__commands_8py_a46fad240192f40a282d4dd8ba241975f}\label{event__commands_8py_a46fad240192f40a282d4dd8ba241975f}} 
+\index{event\_commands.py@{event\_commands.py}!ask\_event\_description@{ask\_event\_description}}
+\index{ask\_event\_description@{ask\_event\_description}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{ask\_event\_description()}{ask\_event\_description()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+ask\+\_\+event\+\_\+description (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+I\+N\+IT state for /changedes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+Conversation initializer for the {\ttfamily /changedes} command.
+
+This function asks the user the new description of their event, then goes to S\+T\+A\+TE 0 \mbox{\Hypertarget{event__commands_8py_a23809947a4e0510e20b1a2e04f3da7c7}\label{event__commands_8py_a23809947a4e0510e20b1a2e04f3da7c7}} 
+\index{event\_commands.py@{event\_commands.py}!ask\_event\_fair@{ask\_event\_fair}}
+\index{ask\_event\_fair@{ask\_event\_fair}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{ask\_event\_fair()}{ask\_event\_fair()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+ask\+\_\+event\+\_\+fair (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 0 for /publish. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 0 for the {\ttfamily /publish} command.
+
+This function lists to the user the fairs as an inline keyboard, then goes to S\+T\+A\+TE 1 \mbox{\Hypertarget{event__commands_8py_a84641401830bdfb608991a7f1e0079f2}\label{event__commands_8py_a84641401830bdfb608991a7f1e0079f2}} 
+\index{event\_commands.py@{event\_commands.py}!ask\_event\_name@{ask\_event\_name}}
+\index{ask\_event\_name@{ask\_event\_name}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{ask\_event\_name()}{ask\_event\_name()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+ask\+\_\+event\+\_\+name (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+I\+N\+IT state for /publish. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+Conversation initializer for the {\ttfamily /publish} command.
+
+This function asks the user the name of their event, then goes to S\+T\+A\+TE 0 \mbox{\Hypertarget{event__commands_8py_a49b283594dd7b2e8014320b06f2ff7e6}\label{event__commands_8py_a49b283594dd7b2e8014320b06f2ff7e6}} 
+\index{event\_commands.py@{event\_commands.py}!confirm\_event\_deleting@{confirm\_event\_deleting}}
+\index{confirm\_event\_deleting@{confirm\_event\_deleting}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{confirm\_event\_deleting()}{confirm\_event\_deleting()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+confirm\+\_\+event\+\_\+deleting (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 0 for /deleteevent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 0 for the {\ttfamily /deleteevent} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$event\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\$}
+
+This function asks the user to confirm they want to delete the selected event with the associated slots, through an inline keyboard, then goes to S\+T\+A\+TE 1 \mbox{\Hypertarget{event__commands_8py_a87d0a81c925b1cdad5e341473629a0f0}\label{event__commands_8py_a87d0a81c925b1cdad5e341473629a0f0}} 
+\index{event\_commands.py@{event\_commands.py}!confirm\_slot\_deleting@{confirm\_slot\_deleting}}
+\index{confirm\_slot\_deleting@{confirm\_slot\_deleting}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{confirm\_slot\_deleting()}{confirm\_slot\_deleting()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+confirm\+\_\+slot\+\_\+deleting (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 1 for /deleteslot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 1 for the {\ttfamily /deleteslot} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$slot\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\$}
+
+This function asks the user to confirm they want to delete the selected slot, through an inline keyboard, then goes to S\+T\+A\+TE 2 \mbox{\Hypertarget{event__commands_8py_a14b92edcf9c1f3fa12bf50677e7b5be0}\label{event__commands_8py_a14b92edcf9c1f3fa12bf50677e7b5be0}} 
+\index{event\_commands.py@{event\_commands.py}!log\_description\_update@{log\_description\_update}}
+\index{log\_description\_update@{log\_description\_update}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{log\_description\_update()}{log\_description\_update()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+log\+\_\+description\+\_\+update (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 1 for /changedes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 1 for the {\ttfamily /changedes} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$event\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\+:des\+:}
+
+This function changes an event description and logs its information, then terminates the conversation. \mbox{\Hypertarget{event__commands_8py_a72f82a9863e3e7edeaee896fc306f414}\label{event__commands_8py_a72f82a9863e3e7edeaee896fc306f414}} 
+\index{event\_commands.py@{event\_commands.py}!log\_event\_creation@{log\_event\_creation}}
+\index{log\_event\_creation@{log\_event\_creation}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{log\_event\_creation()}{log\_event\_creation()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+log\+\_\+event\+\_\+creation (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 1 for /publish. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 1 for the {\ttfamily /publish} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$fair\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\+:name\+:}
+
+This function creates an event and logs its information, then terminates the conversation. \mbox{\Hypertarget{event__commands_8py_a13d2cbfd3eb89c5788aca968c68eff33}\label{event__commands_8py_a13d2cbfd3eb89c5788aca968c68eff33}} 
+\index{event\_commands.py@{event\_commands.py}!log\_event\_deleting@{log\_event\_deleting}}
+\index{log\_event\_deleting@{log\_event\_deleting}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{log\_event\_deleting()}{log\_event\_deleting()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+log\+\_\+event\+\_\+deleting (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 1 for /deleteevent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 1 for the {\ttfamily /deleteevent} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$event\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\$}
+
+This function deletes an event and the associated slots, then logs the information it had and terminates the conversation. \mbox{\Hypertarget{event__commands_8py_a6f1755e013f0cf6ab4c8fafe26d4a53e}\label{event__commands_8py_a6f1755e013f0cf6ab4c8fafe26d4a53e}} 
+\index{event\_commands.py@{event\_commands.py}!log\_slot\_creation@{log\_slot\_creation}}
+\index{log\_slot\_creation@{log\_slot\_creation}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{log\_slot\_creation()}{log\_slot\_creation()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+log\+\_\+slot\+\_\+creation (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 1 for /newslot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 1 for the {\ttfamily /newslot} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$event\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\+:des\+:}
+
+This function creates a slot and logs its information, then terminates the conversation. \mbox{\Hypertarget{event__commands_8py_a730764fc535507d666b4e1fc8b27a1e3}\label{event__commands_8py_a730764fc535507d666b4e1fc8b27a1e3}} 
+\index{event\_commands.py@{event\_commands.py}!log\_slot\_deleting@{log\_slot\_deleting}}
+\index{log\_slot\_deleting@{log\_slot\_deleting}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{log\_slot\_deleting()}{log\_slot\_deleting()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+log\+\_\+slot\+\_\+deleting (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 2 for /deleteslot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 2 for the {\ttfamily /deleteslot} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$slot\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\$}
+
+This function deletes a slot and logs the information it had, then terminates the conversation. \mbox{\Hypertarget{event__commands_8py_aed849e8d02940a29273c9ba46f33c00e}\label{event__commands_8py_aed849e8d02940a29273c9ba46f33c00e}} 
+\index{event\_commands.py@{event\_commands.py}!select\_slot\_for\_event@{select\_slot\_for\_event}}
+\index{select\_slot\_for\_event@{select\_slot\_for\_event}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{select\_slot\_for\_event()}{select\_slot\_for\_event()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+select\+\_\+slot\+\_\+for\+\_\+event (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 0 for /deleteslot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 0 for the {\ttfamily /deleteslot} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$event\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\$}
+
+This function lists to the user the slots of an event of their own as an inline keyboard, then goes to S\+T\+A\+TE 1 \mbox{\Hypertarget{event__commands_8py_a52cca1b82927f8bd3fbcd6b4059efd2a}\label{event__commands_8py_a52cca1b82927f8bd3fbcd6b4059efd2a}} 
+\index{event\_commands.py@{event\_commands.py}!select\_user\_event@{select\_user\_event}}
+\index{select\_user\_event@{select\_user\_event}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{select\_user\_event()}{select\_user\_event()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+select\+\_\+user\+\_\+event (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+I\+N\+IT state for /deleteslot, /deleteevent and /myevents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+Conversation initializer for {\ttfamily /deleteslot}, {\ttfamily /deleteevent} and {\ttfamily /myevents} commands.
+
+This function lists to the user their own events as an inline keyboard, then goes to S\+T\+A\+TE 0 \mbox{\Hypertarget{event__commands_8py_a1a688285d3fd532e910d6d651bf3056d}\label{event__commands_8py_a1a688285d3fd532e910d6d651bf3056d}} 
+\index{event\_commands.py@{event\_commands.py}!select\_user\_event\_after\_text@{select\_user\_event\_after\_text}}
+\index{select\_user\_event\_after\_text@{select\_user\_event\_after\_text}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{select\_user\_event\_after\_text()}{select\_user\_event\_after\_text()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+select\+\_\+user\+\_\+event\+\_\+after\+\_\+text (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 0 for /changedes and /newslot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 0 for {\ttfamily /changedes} and {\ttfamily /newslot} commands.
+
+This function lists to the user their own events as an inline keyboard, then goes to S\+T\+A\+TE 1 \mbox{\Hypertarget{event__commands_8py_a35f5afc769dfe5fd9f2ebd815326c2f4}\label{event__commands_8py_a35f5afc769dfe5fd9f2ebd815326c2f4}} 
+\index{event\_commands.py@{event\_commands.py}!show\_event\_details@{show\_event\_details}}
+\index{show\_event\_details@{show\_event\_details}!event\_commands.py@{event\_commands.py}}
+\doxysubsubsection{\texorpdfstring{show\_event\_details()}{show\_event\_details()}}
+{\footnotesize\ttfamily  int event\+\_\+commands.\+show\+\_\+event\+\_\+details (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Context\+Types.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+PE}]{context }\end{DoxyParamCaption})}
+
+
+
+S\+T\+A\+TE 0 for /myevents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & Update, Telegram parameters \\
+\hline
+{\em context} & Context\+Types, library status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer, the next state
+\end{DoxyReturn}
+S\+T\+A\+TE 0 for the {\ttfamily /myevents} command.
+
+Expected callback pattern (as Reg\+Ex)\+: {\ttfamily $^\wedge$event\+\_\+id\+:\mbox{[}0-\/9\mbox{]}$\ast$\$}
+
+This function logs the information of an event and all the slots associated to it, including the users that booked such slots, then terminates the conversation. 

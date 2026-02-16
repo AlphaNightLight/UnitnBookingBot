@@ -1,0 +1,165 @@
+\hypertarget{db__print_8py}{}\doxysection{utils/db\+\_\+print.py File Reference}
+\label{db__print_8py}\index{utils/db\_print.py@{utils/db\_print.py}}
+
+
+Functions to print the values from the database.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{db__print_8py_a71ef4fd1e22a795b8f72d6d8d4be658d}{db\+\_\+print.\+print\+\_\+users\+\_\+by\+\_\+id}} (str db)
+\begin{DoxyCompactList}\small\item\em Prints all the users in the database, ordered by ID. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{db__print_8py_ab40ab0b60f597b6de849ab2c424ab63e}{db\+\_\+print.\+print\+\_\+users\+\_\+by\+\_\+name}} (str db)
+\begin{DoxyCompactList}\small\item\em Prints all the users in the database, ordered by name. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{db__print_8py_a733fd54593e6559fcc3488e055219770}{db\+\_\+print.\+print\+\_\+fairs}} (str db, bool description=False)
+\begin{DoxyCompactList}\small\item\em Prints all the fairs in the database, ordered by name. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{db__print_8py_a3086e6306f52a8a4b17ac4ea39d3f325}{db\+\_\+print.\+print\+\_\+events}} (str db, bool description=False)
+\begin{DoxyCompactList}\small\item\em Prints all the events in the database, ordered by name. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{db__print_8py_a384b93621ea61314c83fbc66cca8adfa}{db\+\_\+print.\+print\+\_\+events\+\_\+with\+\_\+fair}} (str db)
+\begin{DoxyCompactList}\small\item\em Prints all the events in the database, with associated fair. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{db__print_8py_abb7ddb5933e6f3da1c415bea28c9fd65}{db\+\_\+print.\+print\+\_\+events\+\_\+with\+\_\+owner}} (str db)
+\begin{DoxyCompactList}\small\item\em Prints all the events in the database, with associated owner. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{db__print_8py_a55f242d43c016661b9628d29c863991e}{db\+\_\+print.\+print\+\_\+event\+\_\+slots}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Prints all the slots associated to a given event in the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions to print the values from the database. 
+
+This file contains the implementation of the functions with reading access to the database that prints the records on the standard output instead of returning them to the user. They are useful when the database is being inspected directly from the code instead of using the Telegram A\+PI. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{db__print_8py_a55f242d43c016661b9628d29c863991e}\label{db__print_8py_a55f242d43c016661b9628d29c863991e}} 
+\index{db\_print.py@{db\_print.py}!print\_event\_slots@{print\_event\_slots}}
+\index{print\_event\_slots@{print\_event\_slots}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_event\_slots()}{print\_event\_slots()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+event\+\_\+slots (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Prints all the slots associated to a given event in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & only slots associated with this event are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints the ID, start time and end time of all the records in the {\ttfamily slots} table of the specified database. In case the slot is booked (i.\+e. its {\ttfamily user\+\_\+id} filed is not N\+U\+LL) then the user\textquotesingle{}s ID, name and username are printed as well, otherwise \char`\"{}\+S\+L\+O\+T A\+V\+A\+I\+L\+A\+B\+L\+E\char`\"{} will be shown. Values are ordered by {\ttfamily start\+\_\+time}. \mbox{\Hypertarget{db__print_8py_a3086e6306f52a8a4b17ac4ea39d3f325}\label{db__print_8py_a3086e6306f52a8a4b17ac4ea39d3f325}} 
+\index{db\_print.py@{db\_print.py}!print\_events@{print\_events}}
+\index{print\_events@{print\_events}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_events()}{print\_events()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+events (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{bool}]{description = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Prints all the events in the database, ordered by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em description} & boolean, if True the description field is printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints all the records in the {\ttfamily events} table of the specified database, ordering them by {\ttfamily name} field. By default, the {\ttfamily description} field is omitted, you can print it as well setting the {\ttfamily description} parameter of this function to True. \mbox{\Hypertarget{db__print_8py_a384b93621ea61314c83fbc66cca8adfa}\label{db__print_8py_a384b93621ea61314c83fbc66cca8adfa}} 
+\index{db\_print.py@{db\_print.py}!print\_events\_with\_fair@{print\_events\_with\_fair}}
+\index{print\_events\_with\_fair@{print\_events\_with\_fair}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_events\_with\_fair()}{print\_events\_with\_fair()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+events\+\_\+with\+\_\+fair (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Prints all the events in the database, with associated fair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints the name and ID of all the records in the {\ttfamily events} table of the specified database, together with the name and ID of the fair associated to them. Values are ordered by event\textquotesingle{}s name. \mbox{\Hypertarget{db__print_8py_abb7ddb5933e6f3da1c415bea28c9fd65}\label{db__print_8py_abb7ddb5933e6f3da1c415bea28c9fd65}} 
+\index{db\_print.py@{db\_print.py}!print\_events\_with\_owner@{print\_events\_with\_owner}}
+\index{print\_events\_with\_owner@{print\_events\_with\_owner}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_events\_with\_owner()}{print\_events\_with\_owner()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+events\+\_\+with\+\_\+owner (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Prints all the events in the database, with associated owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints the name and ID of all the records in the {\ttfamily events} table of the specified database, together with the name and ID of the user that published them. Values are ordered by event\textquotesingle{}s name. \mbox{\Hypertarget{db__print_8py_a733fd54593e6559fcc3488e055219770}\label{db__print_8py_a733fd54593e6559fcc3488e055219770}} 
+\index{db\_print.py@{db\_print.py}!print\_fairs@{print\_fairs}}
+\index{print\_fairs@{print\_fairs}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_fairs()}{print\_fairs()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+fairs (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{bool}]{description = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Prints all the fairs in the database, ordered by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em description} & boolean, if True the description field is printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints all the records in the {\ttfamily fairs} table of the specified database, ordering them by {\ttfamily name} field. By default, the {\ttfamily description} field is omitted, you can print it as well setting the {\ttfamily description} parameter of this function to True. \mbox{\Hypertarget{db__print_8py_a71ef4fd1e22a795b8f72d6d8d4be658d}\label{db__print_8py_a71ef4fd1e22a795b8f72d6d8d4be658d}} 
+\index{db\_print.py@{db\_print.py}!print\_users\_by\_id@{print\_users\_by\_id}}
+\index{print\_users\_by\_id@{print\_users\_by\_id}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_users\_by\_id()}{print\_users\_by\_id()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+users\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Prints all the users in the database, ordered by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints all the records in the {\ttfamily user} table of the specified database, ordering them by {\ttfamily user\+\_\+id} field. \mbox{\Hypertarget{db__print_8py_ab40ab0b60f597b6de849ab2c424ab63e}\label{db__print_8py_ab40ab0b60f597b6de849ab2c424ab63e}} 
+\index{db\_print.py@{db\_print.py}!print\_users\_by\_name@{print\_users\_by\_name}}
+\index{print\_users\_by\_name@{print\_users\_by\_name}!db\_print.py@{db\_print.py}}
+\doxysubsubsection{\texorpdfstring{print\_users\_by\_name()}{print\_users\_by\_name()}}
+{\footnotesize\ttfamily  None db\+\_\+print.\+print\+\_\+users\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Prints all the users in the database, ordered by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function prints all the records in the {\ttfamily user} table of the specified database, ordering them by {\ttfamily name} field. 

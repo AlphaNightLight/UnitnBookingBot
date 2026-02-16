@@ -1,0 +1,397 @@
+\hypertarget{db__read_8py}{}\doxysection{utils/db\+\_\+read.py File Reference}
+\label{db__read_8py}\index{utils/db\_read.py@{utils/db\_read.py}}
+
+
+Functions to retrieve the values from the database.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+list\mbox{[}tuple\mbox{[}int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_a5b057bcb614c1e38e72abff6d8f5f125}{db\+\_\+read.\+get\+\_\+users}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the users in the database. \end{DoxyCompactList}\item 
+\mbox{[}str, str\mbox{]} \mbox{\hyperlink{db__read_8py_a0d505fbd65e5e879a7e8f090a22b65c4}{db\+\_\+read.\+get\+\_\+user\+\_\+from\+\_\+id}} (str db, int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific user record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_a95d772e7586936ec46a5be2036c7e77d}{db\+\_\+read.\+get\+\_\+fairs}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the fairs in the database. \end{DoxyCompactList}\item 
+\mbox{[}str, str\mbox{]} \mbox{\hyperlink{db__read_8py_ab28bed3425acbfee909736a861ea4b57}{db\+\_\+read.\+get\+\_\+fair\+\_\+from\+\_\+id}} (str db, int fair\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific fair record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_afd191c0c88125997562726f9f85c0d9d}{db\+\_\+read.\+get\+\_\+events}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the events in the database. \end{DoxyCompactList}\item 
+\mbox{[}int, int, str, str\mbox{]} \mbox{\hyperlink{db__read_8py_a2fae72b591dfd581717035118b735562}{db\+\_\+read.\+get\+\_\+event\+\_\+from\+\_\+id}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific event record. \end{DoxyCompactList}\item 
+str$\vert$None \mbox{\hyperlink{db__read_8py_a32d6f4470e8a7ceefb7428528ec90dbd}{db\+\_\+read.\+get\+\_\+event\+\_\+name}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the name of a specific event record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_a0bd92ee021965e1268f671e118bb6052}{db\+\_\+read.\+get\+\_\+events\+\_\+given\+\_\+fair}} (str db, int fair\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the events belonging to a fair. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_acab745836b68aa15598301e0240d8eaf}{db\+\_\+read.\+get\+\_\+events\+\_\+given\+\_\+owner}} (str db, int owner\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the events published by a user. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_ae150f39991edfb7485ecd3ec991275da}{db\+\_\+read.\+get\+\_\+slots}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots in the database. \end{DoxyCompactList}\item 
+\mbox{[}int, int, str, str\mbox{]} \mbox{\hyperlink{db__read_8py_af51de69e8f2da01c8b6052b60808e18c}{db\+\_\+read.\+get\+\_\+slot\+\_\+from\+\_\+id}} (str db, int slot\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific slot record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_a264f5886cff2b5a9dc3be3abde2b3428}{db\+\_\+read.\+get\+\_\+slot\+\_\+dates}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the dates with at least one free slot associated with them, restricted to a given event. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_a67006e7ab03e152d0027952ddb1e6355}{db\+\_\+read.\+get\+\_\+slot\+\_\+times}} (str db, int event\+\_\+id, str slot\+\_\+day)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots in the database for a given date and event. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, str, str, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_a9664c42edaad3799fb01c415379b20ac}{db\+\_\+read.\+get\+\_\+slots\+\_\+given\+\_\+user}} (str db, int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots booked by a user. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, str, str, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{db__read_8py_aa6fab8aad063720a195e45133088fff4}{db\+\_\+read.\+get\+\_\+slots\+\_\+given\+\_\+event}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots associated to an event. \end{DoxyCompactList}\item 
+\mbox{[}int, int\mbox{]} \mbox{\hyperlink{db__read_8py_a7b263103cf07033b8544225b8f0f1ce5}{db\+\_\+read.\+count\+\_\+slots}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Counts the free and total number of slots associate with an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions to retrieve the values from the database. 
+
+This file contains the implementation of the functions with reading access to the database, i.\+e. that can\textquotesingle{}t modify the records contained in it but can only retrieve values. They are grouped into four categories\+:
+
+1) Functions to read from \char`\"{}users\char`\"{} table
+
+2) Functions to read from \char`\"{}fairs\char`\"{} table
+
+3) Functions to read from \char`\"{}events\char`\"{} table
+
+4) Functions to read from \char`\"{}slots\char`\"{} table 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{db__read_8py_a7b263103cf07033b8544225b8f0f1ce5}\label{db__read_8py_a7b263103cf07033b8544225b8f0f1ce5}} 
+\index{db\_read.py@{db\_read.py}!count\_slots@{count\_slots}}
+\index{count\_slots@{count\_slots}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{count\_slots()}{count\_slots()}}
+{\footnotesize\ttfamily  \mbox{[}int, int\mbox{]} db\+\_\+read.\+count\+\_\+slots (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Counts the free and total number of slots associate with an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, only slots associated with this event are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+free\+\_\+slots\+: integer, number of free slots associated to the event 
+
+all\+\_\+slots\+: integer, total number of slots associated to the event
+\end{DoxyReturn}
+This function counts how many slots associated to a given event are free, i.\+e. with N\+U\+LL {\ttfamily user\+\_\+id}, as well as the total number of slots associated to the event, regardless of their {\ttfamily user\+\_\+id}. \mbox{\Hypertarget{db__read_8py_a2fae72b591dfd581717035118b735562}\label{db__read_8py_a2fae72b591dfd581717035118b735562}} 
+\index{db\_read.py@{db\_read.py}!get\_event\_from\_id@{get\_event\_from\_id}}
+\index{get\_event\_from\_id@{get\_event\_from\_id}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_event\_from\_id()}{get\_event\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}int,int,str, str\mbox{]} db\+\_\+read.\+get\+\_\+event\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific event record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+fair\+\_\+id\+: integer, ID of the fair the event belongs to 
+
+owner\+\_\+id\+: integer, ID of the user that published the event 
+
+name\+: string, the event\textquotesingle{}s name 
+
+description\+: string, the event\textquotesingle{}s description
+\end{DoxyReturn}
+Given the identifier of an event record, this function returns the data associated with it\+: fair\textquotesingle{}s ID, owner\textquotesingle{}s ID, name and description. In case no record is associated to the ID, a tuple of four None is returned. \mbox{\Hypertarget{db__read_8py_a32d6f4470e8a7ceefb7428528ec90dbd}\label{db__read_8py_a32d6f4470e8a7ceefb7428528ec90dbd}} 
+\index{db\_read.py@{db\_read.py}!get\_event\_name@{get\_event\_name}}
+\index{get\_event\_name@{get\_event\_name}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_event\_name()}{get\_event\_name()}}
+{\footnotesize\ttfamily  str$\vert$None db\+\_\+read.\+get\+\_\+event\+\_\+name (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of a specific event record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string, the event\textquotesingle{}s name
+\end{DoxyReturn}
+Specialization of {\ttfamily get\+\_\+event\+\_\+from\+\_\+id} that returns only the most requested field of an event record\+: the name. In case no record is associated to the ID, None is returned. \mbox{\Hypertarget{db__read_8py_afd191c0c88125997562726f9f85c0d9d}\label{db__read_8py_afd191c0c88125997562726f9f85c0d9d}} 
+\index{db\_read.py@{db\_read.py}!get\_events@{get\_events}}
+\index{get\_events@{get\_events}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_events()}{get\_events()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+events (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the events in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of all the event records, each one being a tuple (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)
+\end{DoxyReturn}
+This function retrieves all the events in the database and returns them as a list of tuples ordered by name, each one structured as {\ttfamily (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)}. \mbox{\Hypertarget{db__read_8py_a0bd92ee021965e1268f671e118bb6052}\label{db__read_8py_a0bd92ee021965e1268f671e118bb6052}} 
+\index{db\_read.py@{db\_read.py}!get\_events\_given\_fair@{get\_events\_given\_fair}}
+\index{get\_events\_given\_fair@{get\_events\_given\_fair}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_events\_given\_fair()}{get\_events\_given\_fair()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+events\+\_\+given\+\_\+fair (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the events belonging to a fair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, only the events belonging to this fair are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of the event records belonging to the fair, each one being a tuple (event\+\_\+id, fair\+\_\+id, owner\+\_\+id, name, description)
+\end{DoxyReturn}
+This function retrieves all the events in the database belonging to a certain fair. The result is a list of tuples ordered by name, each one structured as {\ttfamily (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)}. \mbox{\Hypertarget{db__read_8py_acab745836b68aa15598301e0240d8eaf}\label{db__read_8py_acab745836b68aa15598301e0240d8eaf}} 
+\index{db\_read.py@{db\_read.py}!get\_events\_given\_owner@{get\_events\_given\_owner}}
+\index{get\_events\_given\_owner@{get\_events\_given\_owner}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_events\_given\_owner()}{get\_events\_given\_owner()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+events\+\_\+given\+\_\+owner (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{owner\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the events published by a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em owner\+\_\+id} & integer, the ID of the user to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of the event records published by that user, each one being a tuple (event\+\_\+id, fair\+\_\+id, owner\+\_\+id, name, description)
+\end{DoxyReturn}
+This function retrieves all the events in the database with a certain {\ttfamily owner\+\_\+id}, i.\+e. published by a certain user. The result is a list of tuples ordered by name, each one structured as {\ttfamily (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)}. \mbox{\Hypertarget{db__read_8py_ab28bed3425acbfee909736a861ea4b57}\label{db__read_8py_ab28bed3425acbfee909736a861ea4b57}} 
+\index{db\_read.py@{db\_read.py}!get\_fair\_from\_id@{get\_fair\_from\_id}}
+\index{get\_fair\_from\_id@{get\_fair\_from\_id}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_fair\_from\_id()}{get\_fair\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}str, str\mbox{]} db\+\_\+read.\+get\+\_\+fair\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific fair record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, ID of the fair to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name\+: string, the fair\textquotesingle{}s name 
+
+description\+: string, the fair\textquotesingle{}s description
+\end{DoxyReturn}
+Given the identifier of a fair record, this function returns the name and description associated with it. In case no record is associated to the ID, a couple {\ttfamily (None,None)} is returned. \mbox{\Hypertarget{db__read_8py_a95d772e7586936ec46a5be2036c7e77d}\label{db__read_8py_a95d772e7586936ec46a5be2036c7e77d}} 
+\index{db\_read.py@{db\_read.py}!get\_fairs@{get\_fairs}}
+\index{get\_fairs@{get\_fairs}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_fairs()}{get\_fairs()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+fairs (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the fairs in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]}, a list of all the fair records, each one being a tuple (user\+\_\+id,name,description)
+\end{DoxyReturn}
+This function retrieves all the fairs in the database and returns them as a list of tuples ordered by name, each one structured as {\ttfamily (user\+\_\+id,name,description)}. \mbox{\Hypertarget{db__read_8py_a264f5886cff2b5a9dc3be3abde2b3428}\label{db__read_8py_a264f5886cff2b5a9dc3be3abde2b3428}} 
+\index{db\_read.py@{db\_read.py}!get\_slot\_dates@{get\_slot\_dates}}
+\index{get\_slot\_dates@{get\_slot\_dates}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_slot\_dates()}{get\_slot\_dates()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+slot\+\_\+dates (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the dates with at least one free slot associated with them, restricted to a given event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, only slots associated with this event are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}str\mbox{]}\mbox{]}, a list of all the days with at least one free slots associated with them, each one being a singleton (date,)
+\end{DoxyReturn}
+This function retrieves the dates of all the slots that meets the following criteria\+:
+
+1) The slot is free, i.\+e. with N\+U\+LL user
+
+2) The slot\textquotesingle{}s event\+\_\+id is the one passed as parameter
+
+The result is a list of tuples, each one structured as a singleton {\ttfamily (date,)}. \mbox{\Hypertarget{db__read_8py_af51de69e8f2da01c8b6052b60808e18c}\label{db__read_8py_af51de69e8f2da01c8b6052b60808e18c}} 
+\index{db\_read.py@{db\_read.py}!get\_slot\_from\_id@{get\_slot\_from\_id}}
+\index{get\_slot\_from\_id@{get\_slot\_from\_id}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_slot\_from\_id()}{get\_slot\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}int, int, str, str\mbox{]} db\+\_\+read.\+get\+\_\+slot\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{slot\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific slot record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em slot\+\_\+id} & integer, ID of the slot to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+event\+\_\+id\+: integer, ID of the event the slot refers to 
+
+user\+\_\+id\+: integer, ID of the user that booked this slot 
+
+start\+\_\+time\+: time string I\+S\+O-\/8601, date and time the slot will start 
+
+end\+\_\+time\+: time string I\+S\+O-\/8601, date and time the slot will end
+\end{DoxyReturn}
+Given the identifier of a slot record, this function returns the data associated with it\+: event\textquotesingle{}s ID, user that booked it (None if it\textquotesingle{}s a free slot), start time and end time. The two times are time strings in I\+S\+O-\/8601 format. If no record is associated to the ID, a tuple of four None is returned. \mbox{\Hypertarget{db__read_8py_a67006e7ab03e152d0027952ddb1e6355}\label{db__read_8py_a67006e7ab03e152d0027952ddb1e6355}} 
+\index{db\_read.py@{db\_read.py}!get\_slot\_times@{get\_slot\_times}}
+\index{get\_slot\_times@{get\_slot\_times}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_slot\_times()}{get\_slot\_times()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+slot\+\_\+times (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{str}]{slot\+\_\+day }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots in the database for a given date and event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, only slots associated with this event are considered \\
+\hline
+{\em slot\+\_\+day} & time string I\+S\+O-\/8601, only slots scheduled to start on this day are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]}, a list of all the slot records, each one being a tuple (slot\+\_\+id, start\+\_\+time, end\+\_\+time)
+\end{DoxyReturn}
+This function retrieves all the events in the database associated with a given event ID {\bfseries{and}} scheduled to start on a given day. The result is a list of tuples ordered by {\ttfamily start\+\_\+time}, each one structured as {\ttfamily (slot\+\_\+id,start\+\_\+time,end\+\_\+time)}. Please ensure the {\ttfamily slot\+\_\+day} string is formatted according to an I\+S\+O-\/8601 day, i.\+e. \char`\"{}\+Y\+Y\+Y\+Y-\/\+M\+M-\/\+D\+D\char`\"{}, as no format check is made. Also note that since the day is passed as a parameter, {\ttfamily start\+\_\+time} and {\ttfamily end\+\_\+time} will contain just the I\+S\+O-\/8601 time component as \char`\"{}\char`\"{}H\+H\+:\+MM\+:SS, without including the day. \mbox{\Hypertarget{db__read_8py_ae150f39991edfb7485ecd3ec991275da}\label{db__read_8py_ae150f39991edfb7485ecd3ec991275da}} 
+\index{db\_read.py@{db\_read.py}!get\_slots@{get\_slots}}
+\index{get\_slots@{get\_slots}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_slots()}{get\_slots()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+slots (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of all the slot records, each one being a tuple (slot\+\_\+id,event\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time)
+\end{DoxyReturn}
+This function retrieves all the slots in the database and returns them as a list of tuples ordered by start time, each one structured as {\ttfamily (slot\+\_\+id,event\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time)}. \mbox{\Hypertarget{db__read_8py_aa6fab8aad063720a195e45133088fff4}\label{db__read_8py_aa6fab8aad063720a195e45133088fff4}} 
+\index{db\_read.py@{db\_read.py}!get\_slots\_given\_event@{get\_slots\_given\_event}}
+\index{get\_slots\_given\_event@{get\_slots\_given\_event}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_slots\_given\_event()}{get\_slots\_given\_event()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+slots\+\_\+given\+\_\+event (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots associated to an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, the ID of the event to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]}, a list of the slot records associated to the event, each one being a tuple (slot\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time,user\+\_\+name,user\+\_\+username)
+\end{DoxyReturn}
+This function retrieves all the slots in the database with a certain {\ttfamily event\+\_\+id}, i.\+e. associated to a certain event. The result is a list of tuples ordered first by start\+\_\+time and then by user\+\_\+name, each one structured as {\ttfamily (slot\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time,user\+\_\+name,user\+\_\+username)}. \mbox{\Hypertarget{db__read_8py_a9664c42edaad3799fb01c415379b20ac}\label{db__read_8py_a9664c42edaad3799fb01c415379b20ac}} 
+\index{db\_read.py@{db\_read.py}!get\_slots\_given\_user@{get\_slots\_given\_user}}
+\index{get\_slots\_given\_user@{get\_slots\_given\_user}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_slots\_given\_user()}{get\_slots\_given\_user()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+slots\+\_\+given\+\_\+user (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots booked by a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, the ID of the user to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]}, a list of the slot records booked by that user, each one being a tuple (slot\+\_\+id,event\+\_\+id,start\+\_\+time,end\+\_\+time,event\+\_\+name,event\+\_\+description)
+\end{DoxyReturn}
+This function retrieves all the slots in the database with a certain {\ttfamily user\+\_\+id}, i.\+e. booked by a certain user. The result is a list of tuples ordered first by event\+\_\+name and then by start\+\_\+time, each one structured as {\ttfamily (slot\+\_\+id,event\+\_\+id,start\+\_\+time,end\+\_\+time,event\+\_\+name,event\+\_\+description)}. \mbox{\Hypertarget{db__read_8py_a0d505fbd65e5e879a7e8f090a22b65c4}\label{db__read_8py_a0d505fbd65e5e879a7e8f090a22b65c4}} 
+\index{db\_read.py@{db\_read.py}!get\_user\_from\_id@{get\_user\_from\_id}}
+\index{get\_user\_from\_id@{get\_user\_from\_id}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_user\_from\_id()}{get\_user\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}str, str\mbox{]} db\+\_\+read.\+get\+\_\+user\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific user record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, ID of the user to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name\+: string, the user\textquotesingle{}s name 
+
+username\+: string, the user\textquotesingle{}s username
+\end{DoxyReturn}
+Given the identifier of a user record, this function returns the name and username associated with it. In case no record is associated to the ID, a couple {\ttfamily (None,None)} is returned. \mbox{\Hypertarget{db__read_8py_a5b057bcb614c1e38e72abff6d8f5f125}\label{db__read_8py_a5b057bcb614c1e38e72abff6d8f5f125}} 
+\index{db\_read.py@{db\_read.py}!get\_users@{get\_users}}
+\index{get\_users@{get\_users}!db\_read.py@{db\_read.py}}
+\doxysubsubsection{\texorpdfstring{get\_users()}{get\_users()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]} db\+\_\+read.\+get\+\_\+users (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the users in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]}, a list of all the user records, each one being a tuple (user\+\_\+id,name,username)
+\end{DoxyReturn}
+This function retrieves all the users in the database and returns them as a list of tuples ordered by name, each one structured as {\ttfamily (user\+\_\+id,name,username)}. 

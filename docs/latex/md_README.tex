@@ -1,0 +1,149 @@
+\hypertarget{md_README_autotoc_md7}{}\doxysection{Table of Contents}\label{md_README_autotoc_md7}
+
+\begin{DoxyEnumerate}
+\item \href{\#quick-start}{\texttt{ Quick start}}
+\item \href{\#files-in-this-repository}{\texttt{ Files in this repository}}
+\item \href{\#how-to-install-the-application}{\texttt{ How to install the application}}
+\item \href{\#how-to-instantiate-a-bot}{\texttt{ How to instantiate a bot}}
+\item \href{\#how-to-activate-the-bot}{\texttt{ How to activate the bot}}
+\item \href{\#direct-access-to-the-database}{\texttt{ Direct access to the database}}
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md8}{}\doxysection{Quick start}\label{md_README_autotoc_md8}
+This R\+E\+A\+D\+ME presents the information concerning the installation and run of the project on a local machine. Other resources include\+:
+
+
+\begin{DoxyItemize}
+\item The full function documentation, rooted in {\ttfamily docs/html/index.\+html}.
+\item Links to the official documentations of all the A\+PI used by this project, reported in the file {\ttfamily info/api\+\_\+reference.\+txt}.
+\item The command cheatsheet, located in {\ttfamily info/cheatsheet.\+md}. It also summarizes the database structure.
+\item The project report, {\ttfamily report/}, with a full description of the system architecture.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md9}{}\doxysection{Files in this repository}\label{md_README_autotoc_md9}
+In this project, you will find the following files and folders\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily docs/}\+: output folder for the Doxygen documentation.
+\begin{DoxyItemize}
+\item {\ttfamily html/}\+: folder containing the H\+T\+ML documentation of the project.
+\item {\ttfamily latex/}\+: folder containing the La\+Tex documentation of the project.
+\end{DoxyItemize}
+\item {\ttfamily handlers/}\+: folder containing the python modules defining the handler functions.
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{book__commands_8py}{book\+\_\+commands.\+py}}}\+: python module defining the handlers for booking manipulation.
+\item {\ttfamily \mbox{\hyperlink{event__commands_8py}{event\+\_\+commands.\+py}}}\+: python module defining the handlers for event manipulation.
+\item {\ttfamily \mbox{\hyperlink{generic__commands_8py}{generic\+\_\+commands.\+py}}}\+: python module defining the handlers for general information.
+\end{DoxyItemize}
+\item {\ttfamily info/}\+: folder containing additional information on the project.
+\begin{DoxyItemize}
+\item {\ttfamily api\+\_\+reference.\+txt}\+: plain text reporting links to the official documentations of all the libraries used in this project.
+\item {\ttfamily cheatsheet.\+md}\+: Markdown file presenting a summary of the command usages and the database structure.
+\item {\ttfamily Unitn\+Booking\+Bot.\+pptx}\+: Power Point presentation of the project.
+\end{DoxyItemize}
+\item {\ttfamily pictures/}\+: folder containing the pictures used in the report and the documentation.
+\item {\ttfamily report/}\+: folder containing the La\+Tex source code for the report.
+\item {\ttfamily utils/}\+: folder containing the python modules for database management.
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{db__print_8py}{db\+\_\+print.\+py}}}\+: python module defining the functions to print the database on standard output.
+\item {\ttfamily \mbox{\hyperlink{db__read_8py}{db\+\_\+read.\+py}}}\+: python module defining the functions to read data from the database.
+\item {\ttfamily \mbox{\hyperlink{db__write_8py}{db\+\_\+write.\+py}}}\+: python module defining the functions to modify the database.
+\end{DoxyItemize}
+\item {\ttfamily .env}\+: file defining the environment variables of the project.
+\item {\ttfamily .gitignore}\+: to ignore temporary folders in version controlling.
+\item {\ttfamily bot\+\_\+main.\+py}\+: the main python file of the project, used to run the bot.
+\item {\ttfamily create\+\_\+db.\+py}\+: python script that instantiate the database used by the bot.
+\item {\ttfamily Doxyfile}\+: configuration file for the Doxygen documentation.
+\item {\ttfamily edit\+\_\+db.\+py}\+: python script that allows direct manipulation of the database.
+\item {\ttfamily mainpage.\+txt}\+: plain text used to create the home page in the Doxygen documentation.
+\item {\ttfamily R\+E\+A\+D\+M\+E.\+md}\+: this file.
+\item {\ttfamily requirements.\+txt}\+: plain text reporting the python requirements to run this project.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md10}{}\doxysection{How to install the application}\label{md_README_autotoc_md10}
+You can clone this repository on your local machine with\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone git@github.com:AlphaNightLight/UnitnBookingBot.git}
+\end{DoxyCode}
+
+
+Then, in the root folder of the project create a python virtual environment, activate it and install the project requirements\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Create virtual environment}
+\DoxyCodeLine{python -\/m venv myvenv}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Activate it}
+\DoxyCodeLine{source myvenv/bin/activate \# Linux and MacOS}
+\DoxyCodeLine{\# venv\(\backslash\)Scripts\(\backslash\)Activate.ps1 \# Windows PowerShell}
+\DoxyCodeLine{\# venv\(\backslash\)Scripts\(\backslash\)activate.bat \# Windows CMD}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Install requirements}
+\DoxyCodeLine{pip install -\/r requirements.txt}
+\end{DoxyCode}
+
+
+The next step is to create an S\+Q\+Lite database. Inside {\ttfamily .env} set the variable {\ttfamily D\+B\+\_\+\+P\+A\+TH} to the desired database location, then run the {\ttfamily create\+\_\+db.\+py} script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 create\_db.py}
+\end{DoxyCode}
+
+
+{\bfseries{N\+O\+TE}}\+: in case you already have a database compatible with this Bot, you still need to set {\ttfamily D\+B\+\_\+\+P\+A\+TH} to its location, since the main bot script will use this variable to locate the file.
+
+Finally, remember to deactivate the virtual environment with the command {\ttfamily deactivate}.\hypertarget{md_README_autotoc_md11}{}\doxysection{How to instantiate a bot}\label{md_README_autotoc_md11}
+To obtain a Telegram Bot you need to contact the \char`\"{}\+Bot Father\char`\"{}, {\ttfamily @Bot\+Father} username. Issuing the command {\ttfamily /newbot} it will ask you for a name and username to assign to your bot, and return a {\bfseries{Token}}. Copy-\/paste this token inside the {\ttfamily .env} file, as the value of the {\ttfamily B\+O\+T\+\_\+\+T\+O\+K\+EN} variable. It\textquotesingle{}s thanks to this token that the project will be able to access your Telegram account.
+
+Trough Bot Father you can also use {\ttfamily /setabouttext}, {\ttfamily /setdescription} and {\ttfamily /setuserpic} to update further information about your bot. See more details on \href{https://core.telegram.org/bots/features\#creating-a-new-bot}{\texttt{ the official A\+PI}}.
+
+It is also suggested to set a command list. To do so use the command {\ttfamily /mybots}, select the bot, then tap on \char`\"{}\+Edit Commands\char`\"{}. After it a command list will be requested as message, send the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{fairs -\/ show all fairs}
+\DoxyCodeLine{events -\/ show all events}
+\DoxyCodeLine{whoami -\/ check your user metadata}
+\DoxyCodeLine{book -\/ book an event}
+\DoxyCodeLine{unbook -\/ unbook an event}
+\DoxyCodeLine{mybookings -\/ monitor your bookings}
+\DoxyCodeLine{publish -\/ publish an event}
+\DoxyCodeLine{changedes -\/ change event description}
+\DoxyCodeLine{newslot -\/ add a new slot to an event}
+\DoxyCodeLine{deleteslot -\/ delete a slot for an event}
+\DoxyCodeLine{deleteevent -\/ delete an entire event}
+\DoxyCodeLine{myevents -\/ monitor your events}
+\DoxyCodeLine{help -\/ show command descriptions}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md12}{}\doxysection{How to activate the bot}\label{md_README_autotoc_md12}
+To ensure the application works as desired, first open the {\ttfamily .env} file and check that the environment variables correspond to the desired values\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily D\+B\+\_\+\+P\+A\+TH}\+: shall store the path to your database file.
+\item {\ttfamily B\+O\+T\+\_\+\+T\+O\+K\+EN}\+: shall store the token of a bot you control.
+\item {\ttfamily D\+E\+B\+UG}\+: if True than the bot will log additional information during the run.
+\end{DoxyItemize}
+
+To activate the bot it\textquotesingle{}s enough to run the main script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 bot\_main.py}
+\end{DoxyCode}
+
+
+{\bfseries{N\+O\+TE}}\+: your computer needs an internet access to be able to contact the Telegram A\+PI. In case your application is not connected to the internet then the following error will be raised\+: {\ttfamily telegram.\+error.\+Network\+Error\+: httpx.\+Connect\+Error\+: \mbox{[}Errno 11001\mbox{]} getaddrinfo failed}.
+
+To stop the bot, enter the {\ttfamily ctrl+C} key on the application terminal.\hypertarget{md_README_autotoc_md13}{}\doxysection{Direct access to the database}\label{md_README_autotoc_md13}
+The file {\ttfamily edit\+\_\+db.\+py} allows you to apply database modifications directly from code, without having to contact the Telegram A\+PI and with full access to the records. To do so open the file, uncomment the functions you wish to use, and run it with\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 edit\_db.py}
+\end{DoxyCode}
+
+
+The most common operation you want to do from code is to create and delete fairs, since it is not possible to do them from the Bot. To create a new fair uncomment {\ttfamily insert\+\_\+fair} and set the desired name and description. The path to the database file is automatically retrieved from the environment variable. To delete a fair, use {\ttfamily print\+\_\+fairs} to list all fairs. You need to copy the {\ttfamily fair\+\_\+id} value of the fair you want to delete, and pass it to the {\ttfamily delete\+\_\+fair} function.
+
+See the command cheatsheet {\ttfamily info/cheatsheet.\+md} to have more information on the functions you can use, and in case it\textquotesingle{}s not sufficient have a look at their documentation\+: {\ttfamily docs/html/index.\+html}.\hypertarget{md_README_autotoc_md14}{}\doxysection{Maintainer}\label{md_README_autotoc_md14}
+Alex Pegoraro 

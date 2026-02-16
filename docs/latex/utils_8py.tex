@@ -1,0 +1,773 @@
+\hypertarget{utils_8py}{}\doxysection{utils/utils.py File Reference}
+\label{utils_8py}\index{utils/utils.py@{utils/utils.py}}
+
+
+Summary of utils file. Eventual newlines are ignored.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{utils_8py_ad6c5e568e8852ce84f13679063125148}{utils.\+insert\+\_\+user}} (str db, int user\+\_\+id, str name, str username)
+\begin{DoxyCompactList}\small\item\em Inserts a new user in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a50d4a00b7e8a81ad3dcd32834941207b}{utils.\+insert\+\_\+fair}} (str db, str name, str description)
+\begin{DoxyCompactList}\small\item\em Inserts a new fair in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a974d68358c40bbda44192b4bb5b00bc6}{utils.\+insert\+\_\+event}} (str db, int fair\+\_\+id, int owner\+\_\+id, str name, str description)
+\begin{DoxyCompactList}\small\item\em Inserts a new event in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_af2806375c0edc81dfbb26d25678e881c}{utils.\+create\+\_\+slot}} (str db, int event\+\_\+id, datetime start\+\_\+time, datetime end\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Creates a new slot in the database, with no user associated. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a5c1da7eb26c598d0070be3ab503d3044}{utils.\+create\+\_\+slot\+\_\+str}} (str db, int event\+\_\+id, str start\+\_\+time, str end\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Creates a new slot in the database, with no user associated. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a566ce3ebe20800846601985b58fbda30}{utils.\+assign\+\_\+slot}} (str db, int slot\+\_\+id, int$\vert$None user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Assigns an existing slot in the database to a user. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a98b0f7ed511e2800ea4a1b77008d7f8e}{utils.\+update\+\_\+user}} (str db, int user\+\_\+id, str name, str username)
+\begin{DoxyCompactList}\small\item\em Updates a user in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a240fa28b03b057d4f8cdc0b1770bc33c}{utils.\+update\+\_\+fair}} (str db, int fair\+\_\+id, str name, str description)
+\begin{DoxyCompactList}\small\item\em Updates a fair in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a9538bf384420455f42ce5a8cb8b93eba}{utils.\+update\+\_\+event}} (str db, int event\+\_\+id, int fair\+\_\+id, int owner\+\_\+id, str name, str description)
+\begin{DoxyCompactList}\small\item\em Updates an event in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a18cf8e72e40a9aa402b7f0b7f313f17f}{utils.\+update\+\_\+event\+\_\+description}} (str db, int event\+\_\+id, str description)
+\begin{DoxyCompactList}\small\item\em Updates the description of an event in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_aa98369145378baed6095ed31c704bcfd}{utils.\+update\+\_\+slot}} (str db, int slot\+\_\+id, int event\+\_\+id, int$\vert$None user\+\_\+id, datetime start\+\_\+time, datetime end\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates a slot in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a2ac58e467e61e65b3609e3752c834fda}{utils.\+delete\+\_\+user}} (str db, int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Deletes a user in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a505cbdeeb44342dce980ed329682719f}{utils.\+delete\+\_\+fair}} (str db, int fair\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Deletes a fair in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_aa83c68876e5e84ac4e1afa24974c2edc}{utils.\+delete\+\_\+event}} (str db, int event\+\_\+id, bool delete\+\_\+slots=True)
+\begin{DoxyCompactList}\small\item\em Deletes an event in the database. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{utils_8py_a1d52c98906e8c21eac8550997cf6f9a2}{utils.\+delete\+\_\+slot}} (str db, int slot\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Deletes a slot in the database. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_a7c4d410cee51e87dcccaa594f8cffc5d}{utils.\+get\+\_\+users}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the users in the database. \end{DoxyCompactList}\item 
+\mbox{[}str, str\mbox{]} \mbox{\hyperlink{utils_8py_ab8d862f6d8a6f809b4058a19517c5f4f}{utils.\+get\+\_\+user\+\_\+from\+\_\+id}} (str db, int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific user record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_adffc2450a16b8945c5dddd68a702a483}{utils.\+get\+\_\+fairs}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the fairs in the database. \end{DoxyCompactList}\item 
+\mbox{[}str, str\mbox{]} \mbox{\hyperlink{utils_8py_a1fc1dbf03357fbda2ae15929448f307a}{utils.\+get\+\_\+fair\+\_\+from\+\_\+id}} (str db, int fair\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific fair record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_ac89646c61fd290f0e8c7aa77c91a83b2}{utils.\+get\+\_\+events}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the events in the database. \end{DoxyCompactList}\item 
+\mbox{[}int, int, str, str\mbox{]} \mbox{\hyperlink{utils_8py_a61a7a575bb87ecd1cd772018c4bcefd2}{utils.\+get\+\_\+event\+\_\+from\+\_\+id}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific event record. \end{DoxyCompactList}\item 
+str$\vert$None \mbox{\hyperlink{utils_8py_a8497489d72e9556ff662872e8fa37fa4}{utils.\+get\+\_\+event\+\_\+name}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the name of a specific event record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_aa22431e60dcb49e511f6d5dd0d1f90b1}{utils.\+get\+\_\+events\+\_\+given\+\_\+fair}} (str db, int fair\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the events belonging to a fair. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_a132c0bf02378c2f979e716995bbca229}{utils.\+get\+\_\+events\+\_\+given\+\_\+owner}} (str db, int owner\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the events published by a user. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_ab1e69988ab4d4c74a3c784bd30873500}{utils.\+get\+\_\+slots}} (str db)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots in the database. \end{DoxyCompactList}\item 
+\mbox{[}int, int, str, str\mbox{]} \mbox{\hyperlink{utils_8py_afb4f39918c919a4cb3899cf8a1a3fb70}{utils.\+get\+\_\+slot\+\_\+from\+\_\+id}} (str db, int slot\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the data of a specific slot record. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_a19710ea178d7c281716b8cbc1907ac1a}{utils.\+get\+\_\+slot\+\_\+dates}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the dates with at least one free slot associated with them, restricted to a given event. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_abb5682b4eb8236c838f0be4fdc29b083}{utils.\+get\+\_\+slot\+\_\+times}} (str db, int event\+\_\+id, str slot\+\_\+day)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots in the database for a given date and event. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, str, str, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_a0637f8540e2808eddf009b03887e4efb}{utils.\+get\+\_\+slots\+\_\+given\+\_\+user}} (str db, int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots booked by a user. \end{DoxyCompactList}\item 
+list\mbox{[}tuple\mbox{[}int, int, str, str, str, str\mbox{]}\mbox{]} \mbox{\hyperlink{utils_8py_a0cdccc9ab70a172c0905ceb729488afe}{utils.\+get\+\_\+slots\+\_\+given\+\_\+event}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves a list of all the slots associated to an event. \end{DoxyCompactList}\item 
+\mbox{[}int, int\mbox{]} \mbox{\hyperlink{utils_8py_a97eeb0f11155c773803db0af1104d8ec}{utils.\+count\+\_\+slots}} (str db, int event\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Counts the free and total number of slots associate with an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Summary of utils file. Eventual newlines are ignored. 
+
+More details on this file.
+
+Can span multiple paragraphs. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8py_a566ce3ebe20800846601985b58fbda30}\label{utils_8py_a566ce3ebe20800846601985b58fbda30}} 
+\index{utils.py@{utils.py}!assign\_slot@{assign\_slot}}
+\index{assign\_slot@{assign\_slot}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{assign\_slot()}{assign\_slot()}}
+{\footnotesize\ttfamily  None utils.\+assign\+\_\+slot (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{slot\+\_\+id,  }\item[{int$\vert$None}]{user\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Assigns an existing slot in the database to a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em slot\+\_\+id} & integer, ID of the slot to assign \\
+\hline
+{\em user\+\_\+id} & integer, user to assign the slot to, if None the slot is free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function sets the user\+\_\+id field of a slot to the desired value. It can be used to assign a free slot to somebody, or to modify the user of and already assigned slot. To turn free an occupied slot, simply pass the None value as {\ttfamily user\+\_\+id}. \mbox{\Hypertarget{utils_8py_a97eeb0f11155c773803db0af1104d8ec}\label{utils_8py_a97eeb0f11155c773803db0af1104d8ec}} 
+\index{utils.py@{utils.py}!count\_slots@{count\_slots}}
+\index{count\_slots@{count\_slots}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{count\_slots()}{count\_slots()}}
+{\footnotesize\ttfamily  \mbox{[}int, int\mbox{]} utils.\+count\+\_\+slots (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Counts the free and total number of slots associate with an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, only slots associated with this event are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+free\+\_\+slots\+: integer, number of free slots associated to the event 
+
+all\+\_\+slots\+: integer, total number of slots associated to the event
+\end{DoxyReturn}
+This function counts how many slots associated to a given event are free, i.\+e. with N\+U\+LL {\ttfamily user\+\_\+id}, as well as the total number of slots associated to the event, regardless of their {\ttfamily user\+\_\+id}. \mbox{\Hypertarget{utils_8py_af2806375c0edc81dfbb26d25678e881c}\label{utils_8py_af2806375c0edc81dfbb26d25678e881c}} 
+\index{utils.py@{utils.py}!create\_slot@{create\_slot}}
+\index{create\_slot@{create\_slot}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{create\_slot()}{create\_slot()}}
+{\footnotesize\ttfamily  None utils.\+create\+\_\+slot (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{datetime}]{start\+\_\+time,  }\item[{datetime}]{end\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Creates a new slot in the database, with no user associated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event the slot refers to \\
+\hline
+{\em start\+\_\+time} & datetime, date and time the slot will start \\
+\hline
+{\em end\+\_\+time} & datetime, date and time the slot will end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function creates a new free slot in the database, i.\+e. a slot associated with the N\+U\+LL user. The slot\textquotesingle{}s ID is not required, as it is automatically generated by the database. Datetime objects are converted to I\+S\+O-\/8601 time strings. \mbox{\Hypertarget{utils_8py_a5c1da7eb26c598d0070be3ab503d3044}\label{utils_8py_a5c1da7eb26c598d0070be3ab503d3044}} 
+\index{utils.py@{utils.py}!create\_slot\_str@{create\_slot\_str}}
+\index{create\_slot\_str@{create\_slot\_str}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{create\_slot\_str()}{create\_slot\_str()}}
+{\footnotesize\ttfamily  None utils.\+create\+\_\+slot\+\_\+str (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{str}]{start\+\_\+time,  }\item[{str}]{end\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Creates a new slot in the database, with no user associated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event the slot refers to \\
+\hline
+{\em start\+\_\+time} & time string I\+S\+O-\/8601, date and time the slot will start \\
+\hline
+{\em end\+\_\+time} & time string I\+S\+O-\/8601, date and time the slot will end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function creates a new free slot in the database, i.\+e. a slot associated with the N\+U\+LL user. The slot\textquotesingle{}s ID is not required, as it is automatically generated by the database. Please ensure the two time strings are formatted according to I\+S\+O-\/8601, i.\+e. \char`\"{}\+Y\+Y\+Y\+Y-\/\+M\+M-\/\+D\+D H\+H\+:\+M\+M\+:\+S\+S\char`\"{}, as no format check is made. \mbox{\Hypertarget{utils_8py_aa83c68876e5e84ac4e1afa24974c2edc}\label{utils_8py_aa83c68876e5e84ac4e1afa24974c2edc}} 
+\index{utils.py@{utils.py}!delete\_event@{delete\_event}}
+\index{delete\_event@{delete\_event}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{delete\_event()}{delete\_event()}}
+{\footnotesize\ttfamily  None utils.\+delete\+\_\+event (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{bool}]{delete\+\_\+slots = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Deletes an event in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to delete \\
+\hline
+{\em delete\+\_\+slots} & boolean, if true all the slots liked to this event are deleted as well \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function deletes an event already existing in the database. In case {\ttfamily delete\+\_\+slots} is set to True, then all the slots linked to this event are deleted as well. \mbox{\Hypertarget{utils_8py_a505cbdeeb44342dce980ed329682719f}\label{utils_8py_a505cbdeeb44342dce980ed329682719f}} 
+\index{utils.py@{utils.py}!delete\_fair@{delete\_fair}}
+\index{delete\_fair@{delete\_fair}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{delete\_fair()}{delete\_fair()}}
+{\footnotesize\ttfamily  None utils.\+delete\+\_\+fair (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Deletes a fair in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, ID of the fair to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function deletes a fair already existing in the database. \mbox{\Hypertarget{utils_8py_a1d52c98906e8c21eac8550997cf6f9a2}\label{utils_8py_a1d52c98906e8c21eac8550997cf6f9a2}} 
+\index{utils.py@{utils.py}!delete\_slot@{delete\_slot}}
+\index{delete\_slot@{delete\_slot}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{delete\_slot()}{delete\_slot()}}
+{\footnotesize\ttfamily  None utils.\+delete\+\_\+slot (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{slot\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Deletes a slot in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em slot\+\_\+id} & integer, ID of the slot to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function deletes a slot already existing in the database. Nothing happens to the event this slot refers to. \mbox{\Hypertarget{utils_8py_a2ac58e467e61e65b3609e3752c834fda}\label{utils_8py_a2ac58e467e61e65b3609e3752c834fda}} 
+\index{utils.py@{utils.py}!delete\_user@{delete\_user}}
+\index{delete\_user@{delete\_user}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{delete\_user()}{delete\_user()}}
+{\footnotesize\ttfamily  None utils.\+delete\+\_\+user (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Deletes a user in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, ID of the user to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function deletes a user already existing in the database. \mbox{\Hypertarget{utils_8py_a61a7a575bb87ecd1cd772018c4bcefd2}\label{utils_8py_a61a7a575bb87ecd1cd772018c4bcefd2}} 
+\index{utils.py@{utils.py}!get\_event\_from\_id@{get\_event\_from\_id}}
+\index{get\_event\_from\_id@{get\_event\_from\_id}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_event\_from\_id()}{get\_event\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}int,int,str, str\mbox{]} utils.\+get\+\_\+event\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific event record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+fair\+\_\+id\+: integer, ID of the fair the event belongs to 
+
+owner\+\_\+id\+: integer, ID of the user that published the event 
+
+name\+: string, the event\textquotesingle{}s name 
+
+description\+: string, the event\textquotesingle{}s description
+\end{DoxyReturn}
+Given the identifier of an event record, this function returns the data associated with it\+: fair\textquotesingle{}s ID, owner\textquotesingle{}s ID, name and description. In case no record is associated to the ID, a tuple of four None is returned. \mbox{\Hypertarget{utils_8py_a8497489d72e9556ff662872e8fa37fa4}\label{utils_8py_a8497489d72e9556ff662872e8fa37fa4}} 
+\index{utils.py@{utils.py}!get\_event\_name@{get\_event\_name}}
+\index{get\_event\_name@{get\_event\_name}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_event\_name()}{get\_event\_name()}}
+{\footnotesize\ttfamily  str$\vert$None utils.\+get\+\_\+event\+\_\+name (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of a specific event record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string, the event\textquotesingle{}s name
+\end{DoxyReturn}
+Specialization of {\ttfamily get\+\_\+event\+\_\+from\+\_\+id} that returns only the most requested field of an event record\+: the name. In case no record is associated to the ID, None is returned. \mbox{\Hypertarget{utils_8py_ac89646c61fd290f0e8c7aa77c91a83b2}\label{utils_8py_ac89646c61fd290f0e8c7aa77c91a83b2}} 
+\index{utils.py@{utils.py}!get\_events@{get\_events}}
+\index{get\_events@{get\_events}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_events()}{get\_events()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+events (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the events in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of all the event records, each one being a tuple (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)
+\end{DoxyReturn}
+This function retrieves all the events in the database and returns them as a list of tuples ordered by name, each one structured as {\ttfamily (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)}. \mbox{\Hypertarget{utils_8py_aa22431e60dcb49e511f6d5dd0d1f90b1}\label{utils_8py_aa22431e60dcb49e511f6d5dd0d1f90b1}} 
+\index{utils.py@{utils.py}!get\_events\_given\_fair@{get\_events\_given\_fair}}
+\index{get\_events\_given\_fair@{get\_events\_given\_fair}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_events\_given\_fair()}{get\_events\_given\_fair()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+events\+\_\+given\+\_\+fair (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the events belonging to a fair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, only the events belonging to this fair are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of the event records belonging to the fair, each one being a tuple (event\+\_\+id, fair\+\_\+id, owner\+\_\+id, name, description)
+\end{DoxyReturn}
+This function retrieves all the events in the database belonging to a certain fair. The result is a list of tuples ordered by name, each one structured as {\ttfamily (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)}. \mbox{\Hypertarget{utils_8py_a132c0bf02378c2f979e716995bbca229}\label{utils_8py_a132c0bf02378c2f979e716995bbca229}} 
+\index{utils.py@{utils.py}!get\_events\_given\_owner@{get\_events\_given\_owner}}
+\index{get\_events\_given\_owner@{get\_events\_given\_owner}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_events\_given\_owner()}{get\_events\_given\_owner()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+events\+\_\+given\+\_\+owner (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{owner\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the events published by a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em owner\+\_\+id} & integer, the ID of the user to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of the event records published by that user, each one being a tuple (event\+\_\+id, fair\+\_\+id, owner\+\_\+id, name, description)
+\end{DoxyReturn}
+This function retrieves all the events in the database with a certain {\ttfamily owner\+\_\+id}, i.\+e. published by a certain user. The result is a list of tuples ordered by name, each one structured as {\ttfamily (event\+\_\+id,fair\+\_\+id,owner\+\_\+id,name,description)}. \mbox{\Hypertarget{utils_8py_a1fc1dbf03357fbda2ae15929448f307a}\label{utils_8py_a1fc1dbf03357fbda2ae15929448f307a}} 
+\index{utils.py@{utils.py}!get\_fair\_from\_id@{get\_fair\_from\_id}}
+\index{get\_fair\_from\_id@{get\_fair\_from\_id}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_fair\_from\_id()}{get\_fair\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}str, str\mbox{]} utils.\+get\+\_\+fair\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific fair record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, ID of the fair to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name\+: string, the fair\textquotesingle{}s name 
+
+description\+: string, the fair\textquotesingle{}s description
+\end{DoxyReturn}
+Given the identifier of a fair record, this function returns the name and description associated with it. In case no record is associated to the ID, a couple {\ttfamily (None,None)} is returned. \mbox{\Hypertarget{utils_8py_adffc2450a16b8945c5dddd68a702a483}\label{utils_8py_adffc2450a16b8945c5dddd68a702a483}} 
+\index{utils.py@{utils.py}!get\_fairs@{get\_fairs}}
+\index{get\_fairs@{get\_fairs}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_fairs()}{get\_fairs()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+fairs (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the fairs in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]}, a list of all the fair records, each one being a tuple (user\+\_\+id,name,description)
+\end{DoxyReturn}
+This function retrieves all the fairs in the database and returns them as a list of tuples ordered by name, each one structured as {\ttfamily (user\+\_\+id,name,description)}. \mbox{\Hypertarget{utils_8py_a19710ea178d7c281716b8cbc1907ac1a}\label{utils_8py_a19710ea178d7c281716b8cbc1907ac1a}} 
+\index{utils.py@{utils.py}!get\_slot\_dates@{get\_slot\_dates}}
+\index{get\_slot\_dates@{get\_slot\_dates}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_slot\_dates()}{get\_slot\_dates()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}str\mbox{]}\mbox{]} utils.\+get\+\_\+slot\+\_\+dates (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the dates with at least one free slot associated with them, restricted to a given event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, only slots associated with this event are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}str\mbox{]}\mbox{]}, a list of all the days with at least one free slots associated with them, each one being a singleton (date,)
+\end{DoxyReturn}
+This function retrieves the dates of all the slots that meets the following criteria\+:
+
+1) The slot is free, i.\+e. with N\+U\+LL user
+
+2) The slot\textquotesingle{}s event\+\_\+id is the one passed as parameter
+
+The result is a list of tuples, each one structured as a singleton {\ttfamily (date,)}. \mbox{\Hypertarget{utils_8py_afb4f39918c919a4cb3899cf8a1a3fb70}\label{utils_8py_afb4f39918c919a4cb3899cf8a1a3fb70}} 
+\index{utils.py@{utils.py}!get\_slot\_from\_id@{get\_slot\_from\_id}}
+\index{get\_slot\_from\_id@{get\_slot\_from\_id}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_slot\_from\_id()}{get\_slot\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}int, int, str, str\mbox{]} utils.\+get\+\_\+slot\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{slot\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific slot record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em slot\+\_\+id} & integer, ID of the slot to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+event\+\_\+id\+: integer, ID of the event the slot refers to 
+
+user\+\_\+id\+: integer, ID of the user that booked this slot 
+
+start\+\_\+time\+: time string I\+S\+O-\/8601, date and time the slot will start 
+
+end\+\_\+time\+: time string I\+S\+O-\/8601, date and time the slot will end
+\end{DoxyReturn}
+Given the identifier of a slot record, this function returns the data associated with it\+: event\textquotesingle{}s ID, user that booked it (None if it\textquotesingle{}s a free slot), start time and end time. The two times are time strings in I\+S\+O-\/8601 format. If no record is associated to the ID, a tuple of four None is returned. \mbox{\Hypertarget{utils_8py_abb5682b4eb8236c838f0be4fdc29b083}\label{utils_8py_abb5682b4eb8236c838f0be4fdc29b083}} 
+\index{utils.py@{utils.py}!get\_slot\_times@{get\_slot\_times}}
+\index{get\_slot\_times@{get\_slot\_times}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_slot\_times()}{get\_slot\_times()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+slot\+\_\+times (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{str}]{slot\+\_\+day }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots in the database for a given date and event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, only slots associated with this event are considered \\
+\hline
+{\em slot\+\_\+day} & time string I\+S\+O-\/8601, only slots scheduled to start on this day are considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]}, a list of all the slot records, each one being a tuple (slot\+\_\+id, start\+\_\+time, end\+\_\+time)
+\end{DoxyReturn}
+This function retrieves all the events in the database associated with a given event ID {\bfseries{and}} scheduled to start on a given day. The result is a list of tuples ordered by {\ttfamily start\+\_\+time}, each one structured as {\ttfamily (slot\+\_\+id,start\+\_\+time,end\+\_\+time)}. Please ensure the {\ttfamily slot\+\_\+day} string is formatted according to an I\+S\+O-\/8601 day, i.\+e. \char`\"{}\+Y\+Y\+Y\+Y-\/\+M\+M-\/\+D\+D\char`\"{}, as no format check is made. Also note that since the day is passed as a parameter, {\ttfamily start\+\_\+time} and {\ttfamily end\+\_\+time} will contain just the I\+S\+O-\/8601 time component as \char`\"{}\char`\"{}H\+H\+:\+MM\+:SS, without including the day. \mbox{\Hypertarget{utils_8py_ab1e69988ab4d4c74a3c784bd30873500}\label{utils_8py_ab1e69988ab4d4c74a3c784bd30873500}} 
+\index{utils.py@{utils.py}!get\_slots@{get\_slots}}
+\index{get\_slots@{get\_slots}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_slots()}{get\_slots()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+slots (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,int,str,str\mbox{]}\mbox{]}, a list of all the slot records, each one being a tuple (slot\+\_\+id,event\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time)
+\end{DoxyReturn}
+This function retrieves all the slots in the database and returns them as a list of tuples ordered by start time, each one structured as {\ttfamily (slot\+\_\+id,event\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time)}. \mbox{\Hypertarget{utils_8py_a0cdccc9ab70a172c0905ceb729488afe}\label{utils_8py_a0cdccc9ab70a172c0905ceb729488afe}} 
+\index{utils.py@{utils.py}!get\_slots\_given\_event@{get\_slots\_given\_event}}
+\index{get\_slots\_given\_event@{get\_slots\_given\_event}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_slots\_given\_event()}{get\_slots\_given\_event()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+slots\+\_\+given\+\_\+event (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots associated to an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, the ID of the event to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]}, a list of the slot records associated to the event, each one being a tuple (slot\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time,user\+\_\+name,user\+\_\+username)
+\end{DoxyReturn}
+This function retrieves all the slots in the database with a certain {\ttfamily event\+\_\+id}, i.\+e. associated to a certain event. The result is a list of tuples ordered first by start\+\_\+time and then by user\+\_\+name, each one structured as {\ttfamily (slot\+\_\+id,user\+\_\+id,start\+\_\+time,end\+\_\+time,user\+\_\+name,user\+\_\+username)}. \mbox{\Hypertarget{utils_8py_a0637f8540e2808eddf009b03887e4efb}\label{utils_8py_a0637f8540e2808eddf009b03887e4efb}} 
+\index{utils.py@{utils.py}!get\_slots\_given\_user@{get\_slots\_given\_user}}
+\index{get\_slots\_given\_user@{get\_slots\_given\_user}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_slots\_given\_user()}{get\_slots\_given\_user()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+slots\+\_\+given\+\_\+user (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the slots booked by a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, the ID of the user to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,int,str,str,str,str\mbox{]}\mbox{]}, a list of the slot records booked by that user, each one being a tuple (slot\+\_\+id,event\+\_\+id,start\+\_\+time,end\+\_\+time,event\+\_\+name,event\+\_\+description)
+\end{DoxyReturn}
+This function retrieves all the slots in the database with a certain {\ttfamily user\+\_\+id}, i.\+e. booked by a certain user. The result is a list of tuples ordered first by event\+\_\+name and then by start\+\_\+time, each one structured as {\ttfamily (slot\+\_\+id,event\+\_\+id,start\+\_\+time,end\+\_\+time,event\+\_\+name,event\+\_\+description)}. \mbox{\Hypertarget{utils_8py_ab8d862f6d8a6f809b4058a19517c5f4f}\label{utils_8py_ab8d862f6d8a6f809b4058a19517c5f4f}} 
+\index{utils.py@{utils.py}!get\_user\_from\_id@{get\_user\_from\_id}}
+\index{get\_user\_from\_id@{get\_user\_from\_id}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_user\_from\_id()}{get\_user\_from\_id()}}
+{\footnotesize\ttfamily  \mbox{[}str, str\mbox{]} utils.\+get\+\_\+user\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data of a specific user record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, ID of the user to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name\+: string, the user\textquotesingle{}s name 
+
+username\+: string, the user\textquotesingle{}s username
+\end{DoxyReturn}
+Given the identifier of a user record, this function returns the name and username associated with it. In case no record is associated to the ID, a couple {\ttfamily (None,None)} is returned. \mbox{\Hypertarget{utils_8py_a7c4d410cee51e87dcccaa594f8cffc5d}\label{utils_8py_a7c4d410cee51e87dcccaa594f8cffc5d}} 
+\index{utils.py@{utils.py}!get\_users@{get\_users}}
+\index{get\_users@{get\_users}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_users()}{get\_users()}}
+{\footnotesize\ttfamily  list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]} utils.\+get\+\_\+users (\begin{DoxyParamCaption}\item[{str}]{db }\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of all the users in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\mbox{[}tuple\mbox{[}int,str,str\mbox{]}\mbox{]}, a list of all the user records, each one being a tuple (user\+\_\+id,name,username)
+\end{DoxyReturn}
+This function retrieves all the users in the database and returns them as a list of tuples ordered by name, each one structured as {\ttfamily (user\+\_\+id,name,username)}. \mbox{\Hypertarget{utils_8py_a974d68358c40bbda44192b4bb5b00bc6}\label{utils_8py_a974d68358c40bbda44192b4bb5b00bc6}} 
+\index{utils.py@{utils.py}!insert\_event@{insert\_event}}
+\index{insert\_event@{insert\_event}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{insert\_event()}{insert\_event()}}
+{\footnotesize\ttfamily  None utils.\+insert\+\_\+event (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id,  }\item[{int}]{owner\+\_\+id,  }\item[{str}]{name,  }\item[{str}]{description }\end{DoxyParamCaption})}
+
+
+
+Inserts a new event in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, ID of the fair the event belongs to \\
+\hline
+{\em owner\+\_\+id} & integer, ID of the user that published the event \\
+\hline
+{\em name} & string, the event\textquotesingle{}s name in short \\
+\hline
+{\em description} & string, the event\textquotesingle{}s extended description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function inserts a new event into the database. The event\textquotesingle{}s ID is not required, as it is automatically generated by the database. \mbox{\Hypertarget{utils_8py_a50d4a00b7e8a81ad3dcd32834941207b}\label{utils_8py_a50d4a00b7e8a81ad3dcd32834941207b}} 
+\index{utils.py@{utils.py}!insert\_fair@{insert\_fair}}
+\index{insert\_fair@{insert\_fair}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{insert\_fair()}{insert\_fair()}}
+{\footnotesize\ttfamily  None utils.\+insert\+\_\+fair (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{str}]{name,  }\item[{str}]{description }\end{DoxyParamCaption})}
+
+
+
+Inserts a new fair in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em name} & string, the fair\textquotesingle{}s name in short \\
+\hline
+{\em description} & string, the fair\textquotesingle{}s extended description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function inserts a new fair into the database. The fair\textquotesingle{}s ID is not required, as it is automatically generated by the database. \mbox{\Hypertarget{utils_8py_ad6c5e568e8852ce84f13679063125148}\label{utils_8py_ad6c5e568e8852ce84f13679063125148}} 
+\index{utils.py@{utils.py}!insert\_user@{insert\_user}}
+\index{insert\_user@{insert\_user}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{insert\_user()}{insert\_user()}}
+{\footnotesize\ttfamily  None utils.\+insert\+\_\+user (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id,  }\item[{str}]{name,  }\item[{str}]{username }\end{DoxyParamCaption})}
+
+
+
+Inserts a new user in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, ID of the user\textquotesingle{}s chat with the Bot \\
+\hline
+{\em name} & string, user\textquotesingle{}s full name \\
+\hline
+{\em username} & string, user\textquotesingle{}s Telegram username (starts with @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function inserts a new user into the database, and in case their user\+\_\+id already exists it updates the other fields to the new values. \mbox{\Hypertarget{utils_8py_a9538bf384420455f42ce5a8cb8b93eba}\label{utils_8py_a9538bf384420455f42ce5a8cb8b93eba}} 
+\index{utils.py@{utils.py}!update\_event@{update\_event}}
+\index{update\_event@{update\_event}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{update\_event()}{update\_event()}}
+{\footnotesize\ttfamily  None utils.\+update\+\_\+event (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{int}]{fair\+\_\+id,  }\item[{int}]{owner\+\_\+id,  }\item[{str}]{name,  }\item[{str
+}]{description }\end{DoxyParamCaption})}
+
+
+
+Updates an event in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to modify \\
+\hline
+{\em fair\+\_\+id} & integer, the new fair to assign the event to \\
+\hline
+{\em owner\+\_\+id} & integer, the user ID of the event\textquotesingle{}s new owner \\
+\hline
+{\em name} & string, the event\textquotesingle{}s new name \\
+\hline
+{\em description} & string, the event\textquotesingle{}s new description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function modifies an event already existing in the database. \mbox{\Hypertarget{utils_8py_a18cf8e72e40a9aa402b7f0b7f313f17f}\label{utils_8py_a18cf8e72e40a9aa402b7f0b7f313f17f}} 
+\index{utils.py@{utils.py}!update\_event\_description@{update\_event\_description}}
+\index{update\_event\_description@{update\_event\_description}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{update\_event\_description()}{update\_event\_description()}}
+{\footnotesize\ttfamily  None utils.\+update\+\_\+event\+\_\+description (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{event\+\_\+id,  }\item[{str}]{description }\end{DoxyParamCaption})}
+
+
+
+Updates the description of an event in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em event\+\_\+id} & integer, ID of the event to modify \\
+\hline
+{\em description} & string, the event\textquotesingle{}s new description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function is a specialization of {\ttfamily update\+\_\+event} that modifies only the {\ttfamily description} field of the event, since this is the element that is most likely to change for this table. \mbox{\Hypertarget{utils_8py_a240fa28b03b057d4f8cdc0b1770bc33c}\label{utils_8py_a240fa28b03b057d4f8cdc0b1770bc33c}} 
+\index{utils.py@{utils.py}!update\_fair@{update\_fair}}
+\index{update\_fair@{update\_fair}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{update\_fair()}{update\_fair()}}
+{\footnotesize\ttfamily  None utils.\+update\+\_\+fair (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{fair\+\_\+id,  }\item[{str}]{name,  }\item[{str}]{description }\end{DoxyParamCaption})}
+
+
+
+Updates a fair in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em fair\+\_\+id} & integer, ID of the fair to modify \\
+\hline
+{\em name} & string, the fair\textquotesingle{}s new name \\
+\hline
+{\em description} & string, the fair\textquotesingle{}s new description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function modifies a fair already existing in the database. \mbox{\Hypertarget{utils_8py_aa98369145378baed6095ed31c704bcfd}\label{utils_8py_aa98369145378baed6095ed31c704bcfd}} 
+\index{utils.py@{utils.py}!update\_slot@{update\_slot}}
+\index{update\_slot@{update\_slot}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{update\_slot()}{update\_slot()}}
+{\footnotesize\ttfamily  None utils.\+update\+\_\+slot (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{slot\+\_\+id,  }\item[{int}]{event\+\_\+id,  }\item[{int$\vert$None}]{user\+\_\+id,  }\item[{datetime}]{start\+\_\+time,  }\item[{datetime
+}]{end\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Updates a slot in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em slot\+\_\+id} & integer, ID of the slot to modify \\
+\hline
+{\em event\+\_\+id} & integer, ID of the new event the slot refers to \\
+\hline
+{\em user\+\_\+id} & integer, ID of the new user assigned to this slot, if None the slot becomes free \\
+\hline
+{\em start\+\_\+time} & datetime, new date and time the slot will start \\
+\hline
+{\em end\+\_\+time} & datetime, new date and time the slot will end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function modifies a slot already existing in the database. If you want the slot to become free, simply pass the None value as {\ttfamily user\+\_\+id}. In case the slot change involves only the field {\ttfamily user\+\_\+id}, then {\ttfamily assign\+\_\+slot} function is to be preferred. \mbox{\Hypertarget{utils_8py_a98b0f7ed511e2800ea4a1b77008d7f8e}\label{utils_8py_a98b0f7ed511e2800ea4a1b77008d7f8e}} 
+\index{utils.py@{utils.py}!update\_user@{update\_user}}
+\index{update\_user@{update\_user}!utils.py@{utils.py}}
+\doxysubsubsection{\texorpdfstring{update\_user()}{update\_user()}}
+{\footnotesize\ttfamily  None utils.\+update\+\_\+user (\begin{DoxyParamCaption}\item[{str}]{db,  }\item[{int}]{user\+\_\+id,  }\item[{str}]{name,  }\item[{str}]{username }\end{DoxyParamCaption})}
+
+
+
+Updates a user in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & string, the path to the database file \\
+\hline
+{\em user\+\_\+id} & integer, ID of the user to modify \\
+\hline
+{\em name} & string, the user\textquotesingle{}s new name \\
+\hline
+{\em username} & string, the user\textquotesingle{}s new Telegram username (starts with @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function modifies a user already existing in the database. {\ttfamily insert\+\_\+user} can be used to modify a user as well, but {\ttfamily insert\+\_\+user} is to be preferred when you are sure the user already exists. 
