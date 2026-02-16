@@ -13,7 +13,7 @@
 
 This README presents the information concerning the installation and run of the project on a local machine. Other resources include:
 
-- The full function documentation, rooted in `docs/html/index.html`.
+- The full project documentation, rooted in `docs/index.html` and accessible at [https://alphanightlight.github.io/UnitnBookingBot/](https://alphanightlight.github.io/UnitnBookingBot/).
 - Links to the official documentations of all the API used by this project, reported in the file `info/api_reference.txt`.
 - The command cheatsheet, located in `info/cheatsheet.md`. It also summarizes the database structure.
 - The project report, `report/`, with a full description of the system architecture.
@@ -23,8 +23,6 @@ This README presents the information concerning the installation and run of the 
 In this project, you will find the following files and folders:
 
 - `docs/`: output folder for the Doxygen documentation.
-  - `html/`: folder containing the HTML documentation of the project.
-  - `latex/`: folder containing the LaTex documentation of the project.
 
 - `handlers/`: folder containing the python modules defining the handler functions.
   - `book_commands.py`: python module defining the handlers for booking manipulation.
@@ -34,6 +32,7 @@ In this project, you will find the following files and folders:
 - `info/`: folder containing additional information on the project.
   - `api_reference.txt`: plain text reporting links to the official documentations of all the libraries used in this project.
   - `cheatsheet.md`: Markdown file presenting a summary of the command usages and the database structure.
+  - `mainpage.txt`: plain text used to create the home page in the Doxygen documentation.
   - `UnitnBookingBot.pptx`: Power Point presentation of the project.
 
 - `pictures/`: folder containing the pictures used in the report and the documentation.
@@ -50,7 +49,7 @@ In this project, you will find the following files and folders:
 - `create_db.py`: python script that instantiate the database used by the bot.
 - `Doxyfile`: configuration file for the Doxygen documentation.
 - `edit_db.py`: python script that allows direct manipulation of the database.
-- `mainpage.txt`: plain text used to create the home page in the Doxygen documentation.
+- `LICENSE`: Apache-2.0 license file
 - `README.md`: this file.
 - `requirements.txt`: plain text reporting the python requirements to run this project.
 
@@ -139,7 +138,7 @@ python3 edit_db.py
 
 The most common operation you want to do from code is to create and delete fairs, since it is not possible to do them from the Bot. To create a new fair uncomment `insert_fair` and set the desired name and description. The path to the database file is automatically retrieved from the environment variable. To delete a fair, use `print_fairs` to list all fairs. You need to copy the `fair_id` value of the fair you want to delete, and pass it to the `delete_fair` function.
 
-See the command cheatsheet `info/cheatsheet.md` to have more information on the functions you can use, and in case it's not sufficient have a look at their documentation: `docs/html/index.html`.
+See the command cheatsheet `info/cheatsheet.md` to have more information on the functions you can use, and in case it's not sufficient have a look at their documentation: [https://alphanightlight.github.io/UnitnBookingBot/](https://alphanightlight.github.io/UnitnBookingBot/).
 
 ## Maintainer
 

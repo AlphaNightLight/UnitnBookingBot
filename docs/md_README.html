@@ -82,7 +82,7 @@ Table of Contents</h1>
 Quick start</h1>
 <p>This README presents the information concerning the installation and run of the project on a local machine. Other resources include:</p>
 <ul>
-<li>The full function documentation, rooted in <code>docs/html/index.html</code>.</li>
+<li>The full project documentation, rooted in <code>docs/index.html</code> and accessible at <a href="https://alphanightlight.github.io/UnitnBookingBot/">https://alphanightlight.github.io/UnitnBookingBot/</a>.</li>
 <li>Links to the official documentations of all the API used by this project, reported in the file <code>info/api_reference.txt</code>.</li>
 <li>The command cheatsheet, located in <code>info/cheatsheet.md</code>. It also summarizes the database structure.</li>
 <li>The project report, <code>report/</code>, with a full description of the system architecture.</li>
@@ -91,11 +91,7 @@ Quick start</h1>
 Files in this repository</h1>
 <p>In this project, you will find the following files and folders:</p>
 <ul>
-<li><code>docs/</code>: output folder for the Doxygen documentation.<ul>
-<li><code>html/</code>: folder containing the HTML documentation of the project.</li>
-<li><code>latex/</code>: folder containing the LaTex documentation of the project.</li>
-</ul>
-</li>
+<li><code>docs/</code>: output folder for the Doxygen documentation.</li>
 <li><code>handlers/</code>: folder containing the python modules defining the handler functions.<ul>
 <li><code><a class="el" href="book__commands_8py.html" title="Handlers that manipulate the bookings.">book_commands.py</a></code>: python module defining the handlers for booking manipulation.</li>
 <li><code><a class="el" href="event__commands_8py.html" title="Handlers that manipulate the events and associated slots.">event_commands.py</a></code>: python module defining the handlers for event manipulation.</li>
@@ -105,6 +101,7 @@ Files in this repository</h1>
 <li><code>info/</code>: folder containing additional information on the project.<ul>
 <li><code>api_reference.txt</code>: plain text reporting links to the official documentations of all the libraries used in this project.</li>
 <li><code>cheatsheet.md</code>: Markdown file presenting a summary of the command usages and the database structure.</li>
+<li><code>mainpage.txt</code>: plain text used to create the home page in the Doxygen documentation.</li>
 <li><code>UnitnBookingBot.pptx</code>: Power Point presentation of the project.</li>
 </ul>
 </li>
@@ -122,7 +119,7 @@ Files in this repository</h1>
 <li><code>create_db.py</code>: python script that instantiate the database used by the bot.</li>
 <li><code>Doxyfile</code>: configuration file for the Doxygen documentation.</li>
 <li><code>edit_db.py</code>: python script that allows direct manipulation of the database.</li>
-<li><code>mainpage.txt</code>: plain text used to create the home page in the Doxygen documentation.</li>
+<li><code>LICENSE</code>: Apache-2.0 license file</li>
 <li><code>README.md</code>: this file.</li>
 <li><code>requirements.txt</code>: plain text reporting the python requirements to run this project.</li>
 </ul>
@@ -180,7 +177,7 @@ Direct access to the database</h1>
 <p>The file <code>edit_db.py</code> allows you to apply database modifications directly from code, without having to contact the Telegram API and with full access to the records. To do so open the file, uncomment the functions you wish to use, and run it with:</p>
 <div class="fragment"><div class="line">python3 edit_db.py</div>
 </div><!-- fragment --><p>The most common operation you want to do from code is to create and delete fairs, since it is not possible to do them from the Bot. To create a new fair uncomment <code>insert_fair</code> and set the desired name and description. The path to the database file is automatically retrieved from the environment variable. To delete a fair, use <code>print_fairs</code> to list all fairs. You need to copy the <code>fair_id</code> value of the fair you want to delete, and pass it to the <code>delete_fair</code> function.</p>
-<p>See the command cheatsheet <code>info/cheatsheet.md</code> to have more information on the functions you can use, and in case it's not sufficient have a look at their documentation: <code>docs/html/index.html</code>.</p>
+<p>See the command cheatsheet <code>info/cheatsheet.md</code> to have more information on the functions you can use, and in case it's not sufficient have a look at their documentation: <a href="https://alphanightlight.github.io/UnitnBookingBot/">https://alphanightlight.github.io/UnitnBookingBot/</a>.</p>
 <h1><a class="anchor" id="autotoc_md14"></a>
 Maintainer</h1>
 <p>Alex Pegoraro </p>
