@@ -10,7 +10,7 @@ This documentation presents an extensive description of all the python functions
   <li>The repository <code>README.md</code>, concerning the installation and run of the project on a local machine.</li>
   <li>Links to the official documentations of all the API used by this project, reported in the file <code>info/api_reference.txt</code>.</li>
   <li>The command cheatsheet, located in <code>info/cheatsheet.md</code>. It also summarizes the database structure.</li>
-  <li>The project report, <code>report/</code>, with a full description of the system architecture.</li>
+  <li>The project report, <code>report/alex_pegoraro_report.pdf</code>, with a full description of the system architecture.</li>
 </ul>
 
 <h2>Project structure</h2>

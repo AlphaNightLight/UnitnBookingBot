@@ -14,7 +14,7 @@ This file presents a summary of the command usages and the database structure. O
 - The repository `README.md`, concerning the installation and run of the project on a local machine.
 - The full project documentation, rooted in `docs/index.html` and accessible at [https://alphanightlight.github.io/UnitnBookingBot/](https://alphanightlight.github.io/UnitnBookingBot/).
 - Links to the official documentations of all the API used by this project, reported in the file `info/api_reference.txt`.
-- The project report, `report/`, with a full description of the system architecture.
+- The project report, `report/alex_pegoraro_report.pdf`, with a full description of the system architecture.
 
 ## Database structure
 

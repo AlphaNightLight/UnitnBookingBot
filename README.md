@@ -16,7 +16,7 @@ This README presents the information concerning the installation and run of the 
 - The full project documentation, rooted in `docs/index.html` and accessible at [https://alphanightlight.github.io/UnitnBookingBot/](https://alphanightlight.github.io/UnitnBookingBot/).
 - Links to the official documentations of all the API used by this project, reported in the file `info/api_reference.txt`.
 - The command cheatsheet, located in `info/cheatsheet.md`. It also summarizes the database structure.
-- The project report, `report/`, with a full description of the system architecture.
+- The project report, `report/alex_pegoraro_report.pdf`, with a full description of the system architecture.
 
 ## Files in this repository
 
@@ -37,6 +37,7 @@ In this project, you will find the following files and folders:
 
 - `pictures/`: folder containing the pictures used in the report and the documentation.
 - `report/`: folder containing the LaTex source code for the report.
+  - `alex_pegoraro_report.pdf`: the project report.
 
 - `utils/`: folder containing the python modules for database management.
   - `db_print.py`: python module defining the functions to print the database on standard output.
