@@ -44,7 +44,7 @@ Internet o Things, Telegram Bot, SQLite.
 
 Universities often organize events in which students have the opportunity to interact with companies trough conferences as well as individual meetings. This allows the students to secure internships and explore future working opportunities, while the companies can generate awareness and increase the pool of candidates for their specialized positions, often difficult to find in the traditional job market.
 
-Managing this fairs can be very cumbersome for a University, and the user experience is often over-complicated for both the parties involved. UniTN Booking Bot aims to simplify the advertising and booking process of an event, using exclusivity a Telegram Bot. Thanks to it meetings will be arranged with a few taps on an app we use everyday rather than having to pass trough complex sites with multi-factor authentication, guaranteeing a faster and more efficient communication. This will translate into an higher user satisfaction and a streamlining of the event monitoring process.
+Managing this fairs can be very cumbersome for a University, and the user experience is often over-complicated for both the parties involved. UniTN Booking Bot aims to simplify the advertising and booking process of an event, using exclusivity a Telegram Bot. Thanks to it meetings will be arranged with a few taps on an app we use every day rather than having to pass through complex sites with multi-factor authentication, guaranteeing a faster and more efficient communication. This will translate into an higher user satisfaction and a streamlining of the event monitoring process.
 
 While the Telegram interface manages the networking connection and guarantees the association between a user account and a physical person, it does not ensure data persistence. This feature is achieved introducing an SQLite database as a back-end component.
 
@@ -83,11 +83,11 @@ Since the API has not been explained in the lectures, I will use this section to
 
 Bot accounts are created contacting ``The Bot Father'' (@BotFather) application from your telegram account. However, such Bots have neither computational power nor persistent storage, it is a duty of the developer to provide them together with the program logic.
 
-Programs like this project are run on a local machine and use the API to repeatedly send HTTP requests to a Telegram server. They authenticate themselves trough a \textit{token} string, given to you by the Bot Father during the account creation. The server answers with all the new messages from user that contacted the Bot. Now, your can handle the message with your own Bot logic and use the API to send the answer back to the server, that will route them to the correct chats.
+Programs like this project are run on a local machine and use the API to repeatedly send HTTP requests to a Telegram server. They authenticate themselves through  a \textit{token} string, given to you by the Bot Father during the account creation. The server answers with all the new messages from user that contacted the Bot. Now, you can handle the message with your own Bot logic and use the API to send the answer back to the server, that will route them to the correct chats.
 
 \subsection{Stateless Message Handling}
 
-From a programmatic perspective, the Bot logic is achieved trough the definition of \textit{Message Handlers}, i.e. pairs of \textit{filters} and python functions. The idea is that each incoming massage is checked by a filter, and in case of a positive match the correspondent function is executed. Such function will be allowed to access both the message content as well as the chat parameters. \textit{Command Handlers} are a particular type of handlers that match messages starting with a slash followed by a desired string, which identifies the command.
+From a programmatic perspective, the Bot logic is achieved through  the definition of \textit{Message Handlers}, i.e. pairs of \textit{filters} and python functions. The idea is that each incoming massage is checked by a filter, and in case of a positive match the correspondent function is executed. Such function will be allowed to access both the message content as well as the chat parameters. \textit{Command Handlers} are a particular type of handlers that match messages starting with a slash followed by a desired string, which identifies the command.
 
 Bots interactions are not limited to pure text: you can present the user a keyboard of buttons, each one associated with a \textit{callback} string sent to the your program in case of tapping. Callbacks are not processed by message handlers, but are intercepted by \textit{Callback Query Handlers}; however the concept is exactly the same: if the callback matches a certain \textit{pattern} then the correspondent python function is invoked and will process it.
 
@@ -111,7 +111,7 @@ This is the reason why in this project \textit{Conversation Handlers} contain ju
 
 This project is designed to be effectively deployed by the University of Trento, and for this reason I supported it with an extensive documentation. I created it with Doxygen, a documentation software based on function comments. Each function I have implemented embodies a special comment string, that describes its parameters, the return values and its aim in general. At the same time, each file begins with a section enunciating the rationale of the entire module itself.
 
-The documentation is obtained compiling all the comments in the files according to a set of parameters defined in a \texttt{Doxyfile} in the root folder. The output is a full HTML site, ready ti be exposed to the internet. In my case, I used the \textit{GitHub pages} of my repository to host it at the following address: https://alphanightlight.github.io/UnitnBookingBot
+The documentation is obtained compiling all the comments in the files according to a set of parameters defined in a \texttt{Doxyfile} in the root folder. The output is a full HTML site, ready to be exposed to the internet. In my case, I used the \textit{GitHub pages} of my repository to host it at the following address: https://alphanightlight.github.io/UnitnBookingBot
 
 \section{The Bot Implementation}
 
@@ -121,7 +121,7 @@ The main file of the project is \texttt{bot\_main.py}, which instantiate the Bot
 
 The \texttt{.env} file contains the project secrets and environment variables. The Bot token is stored there, to avoid it being hard-coded and increase security and portability. The other important role of this file is to store the database location. Having this information in a global variable is the best solution to ensure different scripts are orchestrated to address the same database instance. The easiest way to create a database with the schema of Fig.~\ref{fig:db-schema} is to run the script \texttt{create\_db.py}. On the other hand, a comprehensive set of functions to interact with a database of this kind is defined in the three modules of the \texttt{utils} folder.
 
-Interact with a database trough a text message interface like Telegram is the key point to bring this service to a non-expert user base, as well as ensuring access control to the resources and providing ubiquitous availability. However, in case some problems arise a more powerful approach is needed: the file \texttt{create\_db.py} import functions with direct access to the database. Its operations are granular at record level and have full visibility of the data; this means it can quickly fix almost any data inconsistency, but it may introduce a lot of new ones if used unconsciously.
+Interact with a database through a text message interface like Telegram is the key point to bring this service to a non-expert user base, as well as ensuring access control to the resources and providing ubiquitous availability. However, in case some problems arise a more powerful approach is needed: the file \texttt{create\_db.py} import functions with direct access to the database. Its operations are granular at record level and have full visibility of the data; this means it can quickly fix almost any data inconsistency, but it may introduce a lot of new ones if used unconsciously.
 
 There is another important usage of this file: \texttt{fairs} can't be created or removed by the Bot, since no handlers are defined for this task, so the only way to manage them is the direct access to the table. This policy have been chosen for the following reason: events are managed by companies, while fairs are managed by the university itself. Hence, there is no reason to let companies indiscriminately generate their own fairs, it shall be the owner of the Bot that decides to which group an event can belong.
 
@@ -228,10 +228,10 @@ This project has been realized for the course ``Laboratory of Internet of Things
 \begin{thebibliography}{00}
 \bibitem{bot-api} Telegram Bot API, last access 18 Feb 2026:\\ https://core.telegram.org/bots/api
 \bibitem{ptb-gh} GitHub repository of python-telegram-bot, last access 18 Feb 2026:\\ https://github.com/python-telegram-bot/python-telegram-bot/wiki
-\bibitem{ptb-doc} Official documentaion of python-telegram-bot, last access 18 Feb 2026:\\ https://docs.python-telegram-bot.org/en/stable/index.html
-\bibitem{sql-doc} Official documentaion of SQLite, last access 18 Feb 2026:\\ https://sqlite.org/index.html
+\bibitem{ptb-doc} Official documentation  of python-telegram-bot, last access 18 Feb 2026:\\ https://docs.python-telegram-bot.org/en/stable/index.html
+\bibitem{sql-doc} Official documentation  of SQLite, last access 18 Feb 2026:\\ https://sqlite.org/index.html
 \bibitem{sql-gg} Quick reference for SQLite, last access 18 Feb 2026:\\ https://www.geeksforgeeks.org/python/python-sqlite
-\bibitem{doxygen-doc} Official documentaion of Doxygen, last access 18 Feb 2026:\\ https://www.doxygen.nl/manual/index.html
+\bibitem{doxygen-doc} Official documentation  of Doxygen, last access 18 Feb 2026:\\ https://www.doxygen.nl/manual/index.html
 %\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
 %\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
 %\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.

@@ -46,6 +46,7 @@ In this project, you will find the following files and folders:
 
 - `.env`: file defining the environment variables of the project.
 - `.gitignore`: to ignore temporary folders in version controlling.
+- `booking_bot_sample.db`: sample database used for testing.
 - `bot_main.py`: the main python file of the project, used to run the bot.
 - `create_db.py`: python script that instantiate the database used by the bot.
 - `Doxyfile`: configuration file for the Doxygen documentation.

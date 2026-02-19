@@ -2,5 +2,5 @@
 **/.venv/
 **/__pycache__/
 
-.env
-booking_bot.db
+# .env
+# booking_bot.db

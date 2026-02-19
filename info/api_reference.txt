@@ -4,14 +4,14 @@ https://core.telegram.org/bots/api
 GitHub repository of python-telegram-bot:
 https://github.com/python-telegram-bot/python-telegram-bot/wiki
 
-Official documentaion of python-telegram-bot:
+Official documentation  of python-telegram-bot:
 https://docs.python-telegram-bot.org/en/stable/index.html
 
-Official documentaion of SQLite:
+Official documentation  of SQLite:
 https://sqlite.org/index.html
 
 Quick reference for SQLite:
 https://www.geeksforgeeks.org/python/python-sqlite
 
-Official documentaion of Doxygen:
+Official documentation  of Doxygen:
 https://www.doxygen.nl/manual/index.html
