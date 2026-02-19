@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  17 FEB 2026 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  19 FEB 2026 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,27 +307,79 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
-
- (C:\Users\nives\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
-
-
-(C:\Users\nives\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
+0.
+ (C:\Users\nives\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 <../pictures/database.png, id=1, 1808.7575pt x 805.0075pt>
 File: ../pictures/database.png Graphic file (type png)
 <use ../pictures/database.png>
-Package pdftex.def Info: ../pictures/database.png  used on input line 95.
-(pdftex.def)             Requested size: 258.0pt x 114.8253pt.
+Package pdftex.def Info: ../pictures/database.png  used on input line 65.
+(pdftex.def)             Requested size: 516.0pt x 229.65062pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 93--96
-[][] 
+[1{C:/Users/nives/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ni
+ves/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+] [2 <../pictures/database.png>] [3]
+<../pictures/screen-display.jpeg, id=19, 722.7pt x 1606.0pt>
+File: ../pictures/screen-display.jpeg Graphic file (type jpg)
+<use ../pictures/screen-display.jpeg>
+Package pdftex.def Info: ../pictures/screen-display.jpeg  used on input line 15
+2.
+(pdftex.def)             Requested size: 129.0pt x 286.66599pt.
+<../pictures/screen-events.jpeg, id=20, 722.7pt x 1606.0pt>
+File: ../pictures/screen-events.jpeg Graphic file (type jpg)
+<use ../pictures/screen-events.jpeg>
+Package pdftex.def Info: ../pictures/screen-events.jpeg  used on input line 169
+.
+(pdftex.def)             Requested size: 129.0pt x 286.66599pt.
+ [4 <../pictures/screen-display.jpeg> <../pictures/screen-events.jpeg>]
+<../pictures/screen-mybookings.jpeg, id=24, 722.7pt x 1606.0pt>
+File: ../pictures/screen-mybookings.jpeg Graphic file (type jpg)
+<use ../pictures/screen-mybookings.jpeg>
+Package pdftex.def Info: ../pictures/screen-mybookings.jpeg  used on input line
+ 186.
+(pdftex.def)             Requested size: 129.0pt x 286.66599pt.
+<../pictures/screen-myevents.jpeg, id=25, 722.7pt x 1606.0pt>
+File: ../pictures/screen-myevents.jpeg Graphic file (type jpg)
+<use ../pictures/screen-myevents.jpeg>
+Package pdftex.def Info: ../pictures/screen-myevents.jpeg  used on input line 1
+95.
+(pdftex.def)             Requested size: 129.0pt x 286.66599pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+[]\OT1/ptm/m/n/10 After the event is over, the com-pany can use
  []
 
+
+Underfull \hbox (badness 2970) in paragraph at lines 204--205
+\OT1/pcr/m/n/10 /deleteevent \OT1/ptm/m/n/10 to re-move the event as well as al
+l
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 217
+.
+(C:\Users\nives\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 217
+.
+
+(C:\Users\nives\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+[]\OT1/ptm/m/n/10 The full project doc-u-men-ta-tion, rooted in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+[]\OT1/ptm/m/n/10 The com-mand cheat-sheet, lo-cated in
+ []
+
+[5 <../pictures/screen-mybookings.jpeg> <../pictures/screen-myevents.jpeg>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -339,34 +391,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{C:/Users/nives/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ni
-ves/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+[6
 
-
- <../pictures/database.png>] (alex_pegoraro_report.aux)
+] (alex_pegoraro_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4214 strings out of 474486
- 66880 string characters out of 5743756
- 1942542 words of memory out of 5000000
- 26460 multiletter control sequences out of 15000+600000
- 600411 words of font info for 117 fonts, out of 8000000 for 9000
+ 4250 strings out of 474486
+ 68612 string characters out of 5743756
+ 1941542 words of memory out of 5000000
+ 26506 multiletter control sequences out of 15000+600000
+ 590165 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,11n,65p,318b,306s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,65p,751b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr6.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmb8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmbi8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/times/utmr8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on alex_pegoraro_report.pdf (1 page, 135144 bytes).
+cmsy7.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier
+/ucrr8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
+/utmb8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
+/utmbi8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
+s/utmr8a.pfb><C:/Users/nives/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on alex_pegoraro_report.pdf (6 pages, 565669 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

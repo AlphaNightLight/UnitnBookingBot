@@ -9,6 +9,7 @@ following commands: <code>/publish</code>, <code>/changedes</code>, <code>/newsl
 """
 
 from dotenv import load_dotenv
+from datetime import datetime
 import os, re
 
 # Load environment variables
@@ -259,22 +260,34 @@ async def log_slot_creation(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         "[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]" +
         " " + "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]" + "$"
     )
-    if pattern.match(slot_times):
-        start_time = slot_times[:19]
-        end_time = slot_times[20:]
-        user_id = update.effective_chat.id
-        event_name = get_event_name(db, event_id)
-        user_name, _ = get_user_from_id(db, user_id)
 
-        create_slot_str(db,event_id,start_time,end_time)
+    if pattern.match(slot_times): # checks for ISO-8601 format
+        try:
+            start_time = slot_times[:19]
+            end_time = slot_times[20:]
 
-        response = "Slot created successfully!\n\nDetails\n"
-        response += "Event: " + event_name + "\n"
-        response += "Start time: " + start_time + "\n"
-        response += "End time: " + end_time + "\n"
-        response += "Owner: " + user_name
+            # These two lines of code do not produce a value, they have the following
+            # goal: if the date exist the operation will succeed. But if the date
+            # is invalid, like 30 February, they will trigger a ValueError jumping
+            # the proper response.
+            datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S")
+            datetime.strptime(end_time, "%Y-%m-%d %H:%M:%S")
+
+            user_id = update.effective_chat.id
+            event_name = get_event_name(db, event_id)
+            user_name, _ = get_user_from_id(db, user_id)
+
+            create_slot_str(db,event_id,start_time,end_time)
+
+            response = "Slot created successfully!\n\nDetails\n"
+            response += "Event: " + event_name + "\n"
+            response += "Start time: " + start_time + "\n"
+            response += "End time: " + end_time + "\n"
+            response += "Owner: " + user_name
+        except ValueError:
+            response = "The provided date matches the format but it's an invalid day, operation cancelled."
     else:
-        response = "The provided date doesn't mach the format, operation cancelled."
+        response = "The provided date doesn't match the format, operation cancelled."
 
     await query.edit_message_text(response)
 

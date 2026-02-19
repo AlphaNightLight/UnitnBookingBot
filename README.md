@@ -14,7 +14,7 @@
 This README presents the information concerning the installation and run of the project on a local machine. Other resources include:
 
 - The full project documentation, rooted in `docs/index.html` and accessible at [https://alphanightlight.github.io/UnitnBookingBot/](https://alphanightlight.github.io/UnitnBookingBot/).
-- Links to the official documentations of all the API used by this project, reported in the file `info/api_reference.txt`.
+- Links to the official documentations of all the APIs used by this project, reported in the file `info/api_reference.txt`.
 - The command cheatsheet, located in `info/cheatsheet.md`. It also summarizes the database structure.
 - The project report, `report/alex_pegoraro_report.pdf`, with a full description of the system architecture.
 
@@ -119,7 +119,7 @@ To ensure the application works as desired, first open the `.env` file and check
 - `BOT_TOKEN`: shall store the token of a bot you control.
 - `DEBUG`: if True than the bot will log additional information during the run.
 
-To activate the bot it's enough to run the main script:
+To expose the bot it's enough to run the main script (remember to activate the virtual environment first):
 
 ```bash
 python3 bot_main.py
@@ -127,11 +127,11 @@ python3 bot_main.py
 
 **NOTE**: your computer needs an internet access to be able to contact the Telegram API. In case your application is not connected to the internet then the following error will be raised: `telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed`.
 
-To stop the bot, enter the `ctrl+C` key on the application terminal.
+To stop the bot, enter the `ctrl+C` key on the application terminal, then deactivate the virtual environment.
 
 ## Direct access to the database
 
-The file `edit_db.py` allows you to apply database modifications directly from code, without having to contact the Telegram API and with full access to the records. To do so open the file, uncomment the functions you wish to use, and run it with:
+The file `edit_db.py` allows you to apply database modifications directly from code, without having to contact the Telegram API and with full access to the records. To do so open the file, uncomment the functions you wish to use, and run it (again, in the virtual environment) with:
 
 ```bash
 python3 edit_db.py

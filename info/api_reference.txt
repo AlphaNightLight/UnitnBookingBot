@@ -1,14 +1,17 @@
-GitHub repo of python-telegram-bot:
-https://github.com/python-telegram-bot/python-telegram-bot/wiki/Introduction-to-the-API
+Telegram Bot API:
+https://core.telegram.org/bots/api
+
+GitHub repository of python-telegram-bot:
+https://github.com/python-telegram-bot/python-telegram-bot/wiki
 
 Official documentaion of python-telegram-bot:
 https://docs.python-telegram-bot.org/en/stable/index.html
 
-Quick reference for SQLite:
-https://www.geeksforgeeks.org/python/python-sqlite/
-
 Official documentaion of SQLite:
 https://sqlite.org/index.html
+
+Quick reference for SQLite:
+https://www.geeksforgeeks.org/python/python-sqlite
 
 Official documentaion of Doxygen:
 https://www.doxygen.nl/manual/index.html
